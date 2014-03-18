@@ -1,0 +1,107 @@
+%
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pdfpages}
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1} % Line spacing
+
+\newcommand{\Title}{\ } % Assignment title
+\newcommand{\Class}{Tender\ Proposal} % Course/class
+
+\begin{document}
+
+        \vspace{4em}
+        
+        \begin{center}%
+        
+          \LARGE \bf \Title \\[10em]
+          \LARGE {\bf Tender Proposal}\\[1em]
+          \LARGE {\bf Project:\ Dot Slash - Auto Mart}\\[1em]
+          \LARGE {\bf Group Members:}\\[2em]
+          \large
+          
+             Mbulungo Musetsho                          (10176382) \\[1em]
+             Ndivhuwo Nthambeleni (10001183)	\\[1em]
+             Joas Mogale (10354167)		\\[1em]
+                %Enter your details below just as the one above
+            
+        \end{center}%
+        
+
+        \newpage
+        \tableofcontents    
+                \newpage
+                \section{Introduction}
+               	%Explanation of document content and reason of document
+               	The purpose of this document is to propose an agreement between the developers; ‘The Gruners’ and the client: Dot Slash, to develop a solution to the to the problem as defined in the project submitted. While this document is a proposal; it also aims to ensure that the project scope is correct, together with introducing new suggestions that will improve the functionality of the system. 
+                \section{Team Description}
+                %Description of the team, describing how well we know each other and to what extent we know each other. This as described by Mbulungo (Consistent throughout the three tender docs)
+                The Gruners, is a competitive team of three students in the Department of Computer Science that have been in collaboration for the most for their undergraduate years of study. The name of the team was inspired by a Computer Science professor at the University of Pretoria, Prof. Stefan Gruner. We have, throughout our different years of undergraduate study, been exposed to numerous technologies and techniques that do not only effectively address software design and development problems, but also provide efficient solutions for current industry development problems. We rely not only on the technologies that we have learnt thus far, but we rely as well on skills such as problem-solving, systems design, decision-making, collaboration, and work-balance in order to successfully develop different kinds of efficient systems.
+                \section{Project Scope to our understanding}
+                %In this part we each explain our understanding on the particular projects. The below subheadings are subject to change in respect of the project.
+                Auto mart is an advertising website owned by dot slash, it advertises second hand cars. When an advert is created, each user has to upload a picture of the car to which they want to advertise. At the moment there is no way of telling that the picture uploaded is indeed that of the specified car, other than having an administrator who will have to confirm the accuracy of each picture, this is a lot of work however, since there are more than 300k pictures in the auto-mart database.
+                    \subsection{Related Projects}
+                   %What is this project related to?
+                   This project is an extension of the Auto Mart website, in that the pictures in the database have to be verified by this system, either before or after submission. 
+                   
+                    
+               \section{Proposed Solution}
+                  %This is where we 'blow the client's mind away' by explaining how we propose how to solve the problem.
+                  In this section we will explain how we aim to solve the problem that was explained above. 
+                                   \subsection{Fundamental Solution }
+                                   The solution to the defined problem is to build a system that will read the images in the auto mart database, so as to verify that the images contain what they are said to contain. This system should be able to see if the picture contains a car, if the car is visible enough, if the picture is of good quality, the make and model of the car, as well as the colour of the car.
+                                 %This is where we explain the expected solution
+                                  \subsubsection{System Environment}
+                                   
+                                    \begin{itemize}
+                                   						\item The system should be reachable from the auto mart interface when a customer uploads an image.
+                                   						\item It is supposed to interface with a database attributes that will be used to check and verify picture adequacy
+                                   						                                  
+                                   						\end{itemize}
+                                                  %Where is this system expected to run?
+                                                     
+                                  \subsubsection{General Constraints}
+                                   %Are there any particular constraints mentioned by the client?
+                                   \begin{itemize}
+                                   						\item This system is supposed to be developed using C\# on windows using visual studio.
+                                   						\item The project should not use any third part libraries, this in order to commercialize it.
+                                   						\item The system interface should be reachable by an administrator who wants to check the validity of all the 300k images in the database.
+                                   						\end{itemize}
+                                   \subsection{Additional Suggestions}
+                                   %This part is used for any additional project solutions. If there are none, subsection could be removed.
+                                   As a group we thought, on top of building a system that does all these above mentioned requirements, it would be a good idea to have a mobile application from which customers can upload their adverts together with the pictures. In which case the system would need to be reachable from the mobile application before the pictures reach the database.
+                                   
+                                  
+                                   
+                    
+                    
+                
+                \section{Glossary}
+                % This is the glossary explaining all the terms in the document
+        		The glossary will explain the terms used in this document that need explanation.
+        		\begin{itemize}
+        		                                   						\item Client: In this case we refer to Dot Slash, the owners of Auto Mart in the person of Attie Gelderblom.
+        		                                   						\item Customers: The Auto Mart users that do the actual advertising and picture uploads.
+        		                                   						\item Developers: This refers to the 'The Gruners', the team that will build the system.
+        		                                   						\item Administrator: Personnel from Dot Slash that will be responsible for overlooking the system and have all privileges provided by the system.
+        		                                   						\end{itemize}
+                
+                        
+        
+        
+\end{document}
