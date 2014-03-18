@@ -1,0 +1,105 @@
+%
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pdfpages}
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1} % Line spacing
+
+\newcommand{\Title}{Project\ Name} % Assignment title
+\newcommand{\Class}{Tender\ Proposal} % Course/class
+
+\begin{document}
+
+        \vspace{4em}
+        
+        \begin{center}%
+        
+          \LARGE \bf \Title \\[4em]
+          \LARGE {\bf The Gruners}\\[1em]
+          \LARGE {\bf Software-Entwickler}\\[2em]
+          \large 
+          			Project Tender Proposal \\[1em]
+          			for\\[1em]
+          			Mobile Augmented Reality Number Plate Recognition \\[1em]
+          			(MAR NPR)\\[1em]
+          			
+            
+        \end{center}%
+        
+
+        \newpage
+        \tableofcontents    
+                \newpage
+                \section{Background}
+               	%Explanation of document content and reason of document
+               		The main objective of this doument is to bring forth and elaborate a proposal to tender the project, Mobile Augmented Reality Number Plate Recognition (MAR NPR), proposed to the University of Pretoria by the Department of Defence, Peace, Safety and Security, at the Council for Scientific and Industrial Research (DPSS, CSIR).
+               		\\
+               		\\ In a nutshell, the Mobile Augmented Reality Number Plate Recognition system is a smartphone-anchored application that will be used to perform real-time capturing and extraction of vital information, about vehicles from a live video source. The system will then further transfer the extracted information to other application modules through web services. The envisioned application must be designed and developed as a native Android based application.
+               	
+               	
+               	\newpage	
+               		
+                \section{Team Description}
+                %Description of the team, describing how well we know each other and to what extent we know each other. This as described by Mbulungo (Consistant throughout the three tender docs)
+                The Gruners Software-Entwickler, is a competitive team of three students in the Department of Computer Science. We have, throughout our different years of undergraduate study, been exposed to numerous technologies and techniques that do not only effectively address software design and development problems, but also provide efficient solutions for current industry development problems. We rely not only on the technologies that we have learnt thus far, but we rely as well on skills such as problem-solving, systems design, decision-making, collaboration, and work-balance in order to successfully develop different kinds of efficient systems.
+                
+                \newpage
+                \section{Problem Description}
+                Applications for the Augmented Reality technology need to be extended into military and police disciplines. The Augmented Reality Number Plate Recognition application can be a vital tool to help mobile units get further information (whether a vehicle is a stolen one, prior incidents etc.) of a particular vehicle using a smartphone.
+                
+                \newpage
+                 
+               \section{Proposed Solution}
+                  %This is where we 'blow the client's mind away' by explaining how we propose how to solve the problem.
+                  	\subsection{Related Projects}
+                  	                   %What is this project related to?
+      	                  \textbf{ Acrossair Augmented Reality Browser}\\
+      	                   Acrossair Augmented Reality Browser is an application for the iPhone environment which allows one to discover and navigate local information easily. For instance, one can use the browser topan around a location in search for restaurants, then the browser will keep retrieving relevant information in real time as the user pans through the location.
+                         \subsection{Fundamental Solution}
+                         %This is where we explain the expected solution
+                         The mobile module of the application is expected to incorporate the following functional requirements:
+                             \begin{itemize}
+         	                    \item Real-time video detection from device's camera. 
+         	                    \item Ability to detect number plates and their contents.
+         	                    \item The module must present a simple, visually appealing, user friendly settings user interface.
+         	                    \item Transmission of number plate information to the web service module.
+         	                    \item The ability to retrieve information based on number plate from the web services to be visualized onto the camera view in real-time.
+                             \end{itemize}
+                             
+                             The Web application module is expected to incorporate the following functional requirements:
+                             \begin{itemize}
+                             	\item Retrieval of number plate information from the Android module.
+                             	\item Query the database for information based on received contents from the Android module.
+                             	\item Returning the query results back to the Android module.
+                             	\item A client side web application for viewing all stored number plate data with a visually appealing, user friendly interface.
+                             	\item Detection of the vehicle's attributes such as the make, model and colour based on the scanned number plates.
+                             
+                             \end{itemize}
+                                 
+                   \subsection{Additional Suggestions}
+                   %This part is used for any additional project solutions. If there are none, subsection could be removed.
+                   \textbf{Web Application Module}
+                   \begin{itemize}
+                   \item We suggest, for the Web module, that we should use HTML5 standard in alongside CSS3 styling to ensure a visually appealing, user friendly front-end for the user, while conserving system integrity.
+                   
+                   
+                   \end{itemize}
+                                   
+                    
+        
+\end{document}
