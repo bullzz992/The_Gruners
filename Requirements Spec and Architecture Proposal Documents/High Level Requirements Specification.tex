@@ -48,35 +48,110 @@
                 \newpage
                 \section{Project Background}
                	%Explanation of the project in general
+               	\vspace{0.1in}
+               	The use of Augmented Reality to supplement real world live entity scanning and viewwith relevant information will be used in this project embedded into an application. This application is a number plate recognition tool that will be used to scan number plates and the text within in order to retrieve all required inofrmation linked to the number plate.
+               	
+               	\vspace{0.2in}
                 \section{Project Vision and Scope}
                 %Description of the project vision and scope
+                \vspace{0.1in}
+                The envisioned system is a mobile application, with a web front-end, which will allow the permittted users to do the following:
+                \begin{itemize}
+	                \item scan through number plates with the android phone
+	                \item receive the resulting information in a user-friendly display.
+	                \item make all relavent CRUD operations, using a user-friendly web interface,  depending on the user's authorization rights.
+	                
+                \end{itemize}
+                
+                \vspace{0.2in}
                 \section{Stakeholders}
                 %An overview and listing of our stakeholder groups
+                \vspace{0.1in}
+                 The system as a will consist of the following stakeholder groups:
+                 \begin{itemize}
+	                 \item Project Owner (The Smart Systems Research Group of the CSIR).
+	                 \item The Developers (The Gruners final year project team of the University of Pretoria)
+	                 \item System Users (The authorized users of the envisioned system).
+	                 
+                 \end{itemize}
                  
                  \section{Architecture Requirements}
+                 	\vspace{0.1in}
+                 	This section discusses all the architecture requirements of the envisioned system - That is, all requirements relating to the infrastructure that will encapsulate all functionality of the system. 
+                 	
                     \subsection{Access Channels}
-                    
+                    \vspace{0.1in}
+                    These are the dirrent channels through which the system can be accessed by all related users.
+                    The system will be accessible by human users through the following channels:
+                    	\begin{enumerate}
+	                    	\item From the web browser throuch a user-friendly web interface. This implies that the system must be accessible from all widely used web browsers (including the most recent versions of Mozilla Firefox, Google Chrome, Apple Safari and Microsoft Internet Explorer).
+	                    	\item From mobile android devices using the Android application.
+                    	\end{enumerate}
+                    	
+                    \vspace{0.2in}
                		\subsection{Quality Requirements}
-                  	%Requirements that affect the efficiency of the system than just effectiveness.
+                  	\vspace{0.1in}
+                  	These are the non-functional requirements relating to the quality properties of the system as well as the services it provides. This includes security, auditability, testability, usability, scalability, maintainability, usability and performance requirements.
+                  	
+                  	\vspace{0.1in}
 	                   	\subsubsection{Security }
+	                   	Security measures will include the following:
+	                   	\begin{itemize}
+		                   	\item All system functionality must only be accessible to successfully authenticated users.
+		                   	\item different functionality will have different access levels such that only authorized users can carry out certain tasks. In particular, all CRUD operations will contain a higher access level than all other operations.
+		                   	
+	                   	\end{itemize}
 	                 	%Security requirements
 	                   	\subsubsection{Auditability}
+	                   	The system must carry out audits for all operations that make alterations to the database. These audit logs can then be provided upon request by authorized users.
 	                   
+	                   \vspace{0.1in}
 	                  	\subsubsection{Testability}
+	                  	All services that the system provides must be testable through a unit test framework. This is to track down the following:
+	                  	\begin{itemize}
+	                  		\item that the service is granted if and only if all pre-conditions are met, and
+	                  		\item that all post-conditions hold true once the service has been granted.
+	                  	\end{itemize}
 	                  	
+	                  	\vspace{0.1in}
 	                  	\subsubsection{Usability}
+	                  	An average user must be able to use the system without any further training or extensive manual consultation required.
 	                  	
+	                  	\vspace{0.1in}
 	                  	\subsubsection{Scalability}
+	                  	\begin{enumerate}
+		                  	\item The system must be able to scale to scan all types of Southern African number plates.
+		                  	\item The system must be aable to operate effectively and efficiently under a load of 1000 concurrent android application users or 100 concurrent web interface users.
+	                  	\end{enumerate}
 	                  	
+	                  	\vspace{0.1in}
 	                  	\subsubsection{Maintainability}
+	                  	All layers of the system must be developer-friendly. - That is, the design and development of the system must allow smooth maintenance of all the system's counterparts.
 	                  	
-	                  	\subsubsection{Usability}
-	                  	
+	                  	\vspace{0.1in}
 	                  	\subsubsection{Performance Requirements}
-	                  	%How long should nonreport operations take?
-	                  	%How long should report operations take?
+	                  	\begin{itemize}
+	                  		\item All non-reporting operations must take less than 1 second.
+	                  		\item All report-related operations must take no longer than 10 seconds.
+	                  	\end{itemize}
+	                  	
+	                
+	                \vspace{0.1in}
                 	\subsection{Architecture Constraints}
-                
+                	For maintainability purposes, the system must adhere to the following architectural constrains:
+                	
+                	\begin{enumerate}
+	                	\item The system must be developed using the following technologies:
+	                	\begin{itemize}
+		                	\item Java SOAP web services (Or REST)
+		                	\item Relational database must be designed and developed in MySQL.
+		                	\item Unit tests must be developed using the Java Unit Test module (if there's such)
+	                	\end{itemize}
+	                	\item The mobile front-end must run on an Android application.
+	                	
+                	\end{enumerate}
+                	
+                	
                 \section{Application (Functional) Requirements}
                 	\subsection{Domain Objects}
                 	
