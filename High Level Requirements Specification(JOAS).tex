@@ -1,0 +1,121 @@
+﻿%
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pdfpages}
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1} % Line spacing
+
+\newcommand{\Title}{CSIR - Mobile Augmented Reality Number Plate Recognition} % Project Name
+\newcommand{\Class}{Requirements\ Specification} % Doc Title
+
+\begin{document}
+
+        \vspace{4em}
+        
+        \begin{center}%
+        	
+		
+          \LARGE \bf \Title \\[4em]
+          \LARGE {\bf High Level Requirements Specification}\\[1em]
+          \LARGE {\bf Team Members:}\\[2em]
+          \large
+          
+             Mbulungo Musetsho                          (10176382) \\[1em]
+             Ndivhuwo Nthambeleni (10001183)	\\[1em]
+             Joas Mogale (10354167)		\\[1em]
+                %Enter your details below just as the one above
+            
+        \end{center}%
+        
+
+        \newpage
+        \tableofcontents    
+                \newpage
+                \section{Project Background}
+	Real time number plate recognition is a merits tool that will help easy access to ensential information about vehicles. Using a smartphone in an augmented reality view to extract the vehicle's details and share those observations of the web for better view. This is an effective procedure which could help solve vehicles related delimmas unlike relying on vulnerable human.
+               	%Explanation of the project in general
+                \section{Project Vision and Scope}
+The projects is based on the following applications which synchronise to unit:
+\item{Mobile Application}
+The mobile(Smartphone) will co-relate with application to have a user friendly interface that can detect South African number plate using the mobile's camera live video detection feature. After acquiring the information and then posting it on the web application.
+
+\item{Web Application}
+The web application will receive information the mobile application and query the daatabase based on the provided data, then returning query results to the mobile application
+
+                %Description of the project vision and scope
+                \section{Stakeholders}
+This project falls within the scope of the Department of Defence, Peace, Safety and Security(DPSS), at the Council for Scientific
+and Industrial Research(CSIR) business model
+                %An overview and listing of our stakeholder groups
+                 
+                 \section{Architecture Requirements}
+                    \subsection{Access Channels}
+The system will be accessible by human users through the following channels:
+1. From a web browser through a rich web interface. The system must be accessible from any of
+the widely used web browsers including all recent versions of Mozilla Firefox, Google Chrome,
+Apple Safari and Microsoft Internet Explorer.
+2. From mobile Android devices.
+Other systems should be able to access the services o#ered by the system through either RESTful
+or SOAP-based web services.
+                    
+               		\subsection{Quality Requirements}
+                  	%Requirements that affect the efficiency of the system than just effectiveness.
+	                   	\subsubsection{Security }
+	                 	All system functionality is only accessible to users who can be authenticated through the authorized CSIR users
+	                   	\subsubsection{Auditability}
+	                   Accountability must be enforced. To provide information   of any modifications, the time and the user.
+	                  	\subsubsection{Testability}
+All services offered by the system must be testable through unit tests which test that the post and pre conditions are met
+	                  	\subsubsection{Usability}
+All will not need prior training to use this system.
+	                  	
+	                  	\subsubsection{Scalability}
+The deployed system must be able to operate e#ectively under the load of 500 concurrent users
+         	
+	                  	\subsubsection{Maintainability}
+	                  	
+	                  	\subsubsection{Performance Requirements}
+	                  	The system does not have particularly stringent performance requirements.
+1. All non-reporting operations should respond within less than 1 second.
+2. Report queries should be processed in no more than 10 seconds.
+                	\subsection{Architecture Constraints}
+                
+                \section{Application (Functional) Requirements}
+                	\subsection{Domain Objects}
+                	
+                	%This subsections will be filled once we have had a meeting and found out about the list of functional requirements from the client
+                	\subsection{Contract 1}
+                	
+                	\subsection{Contract 2}
+                	
+                	\subsection{Contract 3}
+                	
+                  	\subsection{Reporting}
+                  	
+                  		\subsubsection{Generate Audit Report}
+                
+                
+                
+                \section{Appendices}
+                % This is the glossary explaining all the terms in the document
+        
+                
+                        
+        
+        
+\end{document}
