@@ -1,4 +1,3 @@
-%
 \documentclass[12pt]{article}
 
 \usepackage[english]{babel}
@@ -22,6 +21,30 @@
 
 \newcommand{\Title}{CSIR - Mobile Augmented Reality Number Plate Recognition} % Project Name
 \newcommand{\Class}{Requirements\ Specification} % Doc Title
+\makeatletter
+\renewcommand{\section}{\@startsection
+   {section}%                         name
+   {1}%                               level
+   {0mm}%                             indent
+   {-1.5\baselineskip}%               space above header
+   {0.5\baselineskip}%                space under header
+   {\sffamily\bfseries\upshape\normalsize}}% style
+\renewcommand{\subsection}{\@startsection
+   {subsection}%                      name
+   {2}%                               level
+   {4mm}%                             indent
+   {-0.75\baselineskip}%              space above header
+   {0.25\baselineskip}%               space under header
+   {\rmfamily\normalfont\scshape\normalsize}}% style
+\renewcommand{\subsubsection}{\@startsection
+   {subsubsection}%                    name
+   {3}%                               level
+   {0mm}%                             indent
+   {-0.75\baselineskip}%              space above header
+   {0.25\baselineskip}%               space under header
+   {\rmfamily\normalfont\slshape\normalsize}}% style
+\makeatother
+
 
 \begin{document}
 
@@ -46,51 +69,39 @@
         \tableofcontents    
                 \newpage
                 \section{Overview}
-               	%Explanation of document content and reason of document
-               	\vspace{0.1in}
-               	This document contains all suggestions regarding the architectural structure of the envisioned system.
-                \section{Layers}
-                %Description of the layers the system will consist of.
-                To provide a good high-level separation of responsibility, we will make use of a layered architectural pattern. This allows reuse of lower level components, such as business logic, across different high level components.
-                \section{Frameworks and technologies}
-                
-                	\subsection{Web Framework}
-                	
-                    \subsection{Reporting}
-                   %This will depend on the framework Java offers for reporting
-                    \subsection{REST/SOAP Framework}
-	                 %This will depend on which one of the above architectures we will choose
-                    
-                    \subsection{Logging}
-                    %This will be implemented if we have any logging methods 
-                    
-                    \subsection{Testing}
-                    
-                    \subsection{Extraction, Building and Deploying}
-                    
-               \section{Architectural Solutions to Quality Requirements}
+                		\subsection{Assumptions}
+                		\subsection{Overview }
+               	%input
+                \section{Vision and Scope}
+                		\subsection{Scope and Limitations }
+                		
+                \section{Architectural Requirements}
+                		\subsection{Access Channel }
+                		\subsection{Quality}
+                		\subsection{Intergration}
+                		\subsection{Architecture Constraints}
                
-               		\subsubsection{Security }
-                 	%Security requirements
-                   	\subsubsection{Auditability}
-
-                  	\subsubsection{Testability}
-                  	
-                  	\subsubsection{Usability}
-                  	
-                  	\subsubsection{Scalability}
-                  	
-                  	\subsubsection{Maintainability}
-                  	
-                  	\subsubsection{Usability}
-                  	
-                  	\subsubsection{Performance Requirements}
-                
-                \section{Appendices}
-                % This is the glossary explaining all the terms in the document
-        
-                
-                        
-        
-        
+                \section{Software Architecture Documentation}
+               		 \subsection{Architecture Requirement}
+                			\subsubsection{Quality Requirement}  
+                			\subsubsection{Quality Requirement}  
+                			\subsubsection{Integration and Access Channel Requirement}  
+                			\subsubsection{Architecture Constraints}  
+                	\subsection{Architectural patterns or Styles}
+                    \subsection{Architecture Tactics or Strategies}
+                    \subsection{Use of Reference Architecture and Frameworks }
+                    \subsection{Access and Integration and Channel }
+					\subsection{Technologies}
+                    
+                \section{Functional requirements and application design}
+                    \subsection{Introduction}
+                    \subsection{Required functionality}
+                    \subsection{Use case prioritization}
+                    \subsection{Use Case/Services contracts}
+                    \subsection{Process specifications}
+                    \subsection{Domain Objects}
+               \section{Glossary}
+             
 \end{document}
+
+
