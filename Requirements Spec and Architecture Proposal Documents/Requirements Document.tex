@@ -57,9 +57,9 @@
           \LARGE {\bf Team Members:}\\[2em]
           \large
           
-             Mbulungo Musetsho                          (10176382) \\[1em]
-             Ndivhuwo Nthambeleni (10001183)	\\[1em]
-             Joas Mogale (10354167)		\\[1em]
+             Mbulungo Musetsho                          (10176382)  \\[1em]
+             Ndivhuwo Nthambeleni 						(10001183)	\\[1em]
+             Joas Mogale 								(10354167)	\\[1em]
                 %Enter your details below just as the one above
             
         \end{center}%
@@ -175,18 +175,45 @@
                 				
                 			  
                 	\subsection{Architectural patterns or Styles}
-                    \subsection{Architecture Tactics or Strategies}
-                    \subsection{Use of Reference Architecture and Frameworks }
+                			For the sake of good high-level responsibility separation and allowance for reuse of lower level layer components across components in higher level layers, a layered architecture will be used for this system.
+                			The layered architecture for the system contains the following layers:
+                			\begin{itemize}
+		                			\item Client Layer
+		                			\item Access Layer
+		                			\item Business Processes Layer
+		                			\item Domain Objects Layer
+		                			\item Backend Layer
+                			\end{itemize} 
+                			
+                			The responsibility allocation across the layers is as follows:
+                			\begin{enumerate}
+                					\item Provide access to humans: Client Layer
+                					\item Provide access to system functionality to human access layer and other systems: Access Layer
+                					\item Business Logic Encapsulation: Business Processes Layer
+                					\item Provide domain objects: Domain Objects Layer
+                					\item Hosting Database: Backend Layer
+                			\end{enumerate}
+                			
+                    % Commented out for later stage:\subsection{Architecture Tactics or Strategies}
+                    % Commented out for later stage: \subsection{Use of Reference Architecture and Frameworks }
 					\subsection{Technologies}
+							Technologies that will be used throughout the system development include:
+							\begin{itemize}
+								\item JAVA Native Android SDK
+								\item HTML 5
+								\item JAVA Programming Language
+								\item Qualcomm Vuforia Augmented Reallity SDK
+								\item MySQL Database for JDBC
+							\end{itemize}
                     
-                \section{Functional requirements and application design}
-                    \subsection{Introduction}
-                    \subsection{Required functionality}
-                    \subsection{Use case prioritization}
-                    \subsection{Use Case/Services contracts}
-                    \subsection{Process specifications}
-                    \subsection{Domain Objects}
-               \section{Glossary}
+                %\section{Functional requirements and application design}
+                    %\subsection{Introduction}
+                   % \subsection{Required functionality}
+                   % \subsection{Use case prioritization}
+                   % \subsection{Use Case/Services contracts}
+                   % \subsection{Process specifications}
+                   % \subsection{Domain Objects}
+               %\section{Glossary}
              
 \end{document}
 
