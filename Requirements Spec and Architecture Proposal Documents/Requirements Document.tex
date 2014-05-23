@@ -237,7 +237,7 @@
                     		\subsubsection{Data Retrieval}
                     				Data Retrieval may be triggered either by the user or by the system as a sequence of use cases. Its function is to take a request and fetch all information related to the requested number plate. The retrieved data is stored onto the local database for display.
                     		
-                    		\subsubsection{Display Results}
+                    		\subsubsection{Results Output}
                     				This function fetches the retrieved data from the local database. This data must be displayed on the screen as the camera's focus is on a scanned number plate whose details have been retrieved from the remote database. 
                     				
                     				
@@ -249,8 +249,21 @@
                     				
                     \subsection{Use case prioritization}
                     		\subsubsection{Critical}
+                    				The following use cases are considered critical:
+                    				\begin{itemize}
+	                    					\item Number Plate Detection
+	                    					\item Data Retrieval
+	                    					\item Results Output
+                    				\end{itemize}
+                    				
                     		\subsubsection{Important}
-                    		\subsubsection{Nice-To-Have}
+                    		The following use cases are considered important:
+                    				\begin{itemize}
+		                    				\item Data Management
+		                    				\item Audit Log
+		                    				\item Storing Locally
+                    				\end{itemize}
+                    		
                     		
                    % \subsection{Use Case/Services contracts}
                    % \subsection{Process specifications}
