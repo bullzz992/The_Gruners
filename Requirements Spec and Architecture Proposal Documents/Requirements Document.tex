@@ -24,28 +24,28 @@
 \newcommand{\Title}{CSIR - Mobile Augmented Reality Number Plate Recognition} % Project Name
 \newcommand{\Class}{Requirements\ Specification} % Doc Title
 \makeatletter
-\renewcommand{\section}{\@startsection
-   {section}%                         name
-   {1}%                               level
-   {0mm}%                             indent
-   {-1.5\baselineskip}%               space above header
-   {0.5\baselineskip}%                space under header
-   {\sffamily\bfseries\upshape\normalsize}}% style
-\renewcommand{\subsection}{\@startsection
-   {subsection}%                      name
-   {2}%                               level
-   {4mm}%                             indent
-   {-0.75\baselineskip}%              space above header
-   {0.25\baselineskip}%               space under header
-   {\rmfamily\normalfont\scshape\normalsize}}% style
-\renewcommand{\subsubsection}{\@startsection
-   {subsubsection}%                    name
-   {3}%                               level
-   {0mm}%                             indent
-   {-0.75\baselineskip}%              space above header
-   {0.25\baselineskip}%               space under header
-   {\rmfamily\normalfont\slshape\normalsize}}% style
-\makeatother
+%\renewcommand{\section}{\@startsection
+  % {section}%                         name
+  % {1}%                               level
+  % {0mm}%                             indent
+  % {-1.5\baselineskip}%               space above header
+   %{0.5\baselineskip}%                space under header
+  % {\sffamily\bfseries\upshape\normalsize}}% style
+%\renewcommand{\subsection}{\@startsection
+ %  {subsection}%                      name
+ %  {2}%                               level
+ %  {0mm}%                             indent
+ %  {-0.75\baselineskip}%              space above header
+ %  {0.25\baselineskip}%               space under header
+ %  {\rmfamily\normalfont\upshape\normalsize}}% style
+%\renewcommand{\subsubsection}{\@startsection
+%   {subsubsection}%                    name
+%   {3}%                               level
+%   {0mm}%                             indent
+%   {-0.75\baselineskip}%              space above header
+%   {0.25\baselineskip}%               space under header
+%   {\rmfamily\normalfont\slshape\normalsize}}% style
+%\makeatother
 
 
 \begin{document}
@@ -236,7 +236,12 @@
                     \subsection{Required functionality}
                     		\subsubsection{Number Plate Detection}
                     				The system's core function relies on the detection of number plates. The system allows the user to pan through the environment with their mobile phone. When the camera lens gets to a vehicle number plate, the application makes a detection of the number plate by scanning the digits character for character within the number plate region.
-                    			
+                    				
+                    				\begin{figure}[h]
+					           				\centering
+					           				\includegraphics[width=5.51in, height=3.77in]{Pictures/NumberPlateDetectionUseCase.jpg}
+					           				\caption{Number Plate Detection Use Case Diagram}
+		           					\end{figure}
                     			
                     		\subsubsection{Storing Locally}
                     				Once the mobile app has made a scan, this use case is triggered. The system needs to keep record of all the scans the user has made. So the system will store the stored number plate characters onto a local database. The system will then create a request for a database fetch of information related to the scanned number plate.
@@ -274,7 +279,19 @@
                     		
                    % \subsection{Use Case/Services contracts}
                    % \subsection{Process specifications}
-                   % \subsection{Domain Objects}
+                    \subsection{Domain Objects}
+                    		This section introduces core domain concepts and aspects of the requirements which are used across different use cases.
+                    		The main domain objects are:
+                    		\begin{itemize}
+		                    		\item Owner: This encapusulates all attributes of a vehicle owner. This could be a person or a company.
+		                    		\item Vehicle: All attributes of a car are encapsulated in this object and will contain a reference to an 'Owner' object such that each car has exactly one owner.
+		                    		\item Detection: All detections that successfully retrieved data will each be encapsulate in this object.
+                    		\end{itemize}
+                    		\begin{figure}[h]
+		                             \centering
+		                             \includegraphics[width=4.59in, height=2.75in]{Pictures/CoreDomainObjects.jpg}
+		                             \caption{Core Domain Objects}
+		             		\end{figure}
                %\section{Glossary}
              
 \end{document}
