@@ -222,10 +222,36 @@
 								\item MySQL Database for JDBC
 							\end{itemize}
                     
-                %\section{Functional requirements and application design}
-                    %\subsection{Introduction}
-                   % \subsection{Required functionality}
-                   % \subsection{Use case prioritization}
+                \section{Functional requirements and application design}
+                    \subsection{Introduction}
+                    This section discusses all the functional requirements for the CSIR Augmented Reality Number Plate Recognition system.
+                    
+                    \subsection{Required functionality}
+                    		\subsubsection{Number Plate Detection}
+                    				The system's core function relies on the detection of number plates. The system allows the user to pan through the environment with their mobile phone. When the camera lens gets to a vehicle number plate, the application makes a detection of the number plate by scanning the digits character for character within the number plate region.
+                    			
+                    			
+                    		\subsubsection{Storing Locally}
+                    				Once the mobile app has made a scan, this use case is triggered. The system needs to keep record of all the scans the user has made. So the system will store the stored number plate characters onto a local database. The system will then create a request for a database fetch of information related to the scanned number plate.
+                    		
+                    		\subsubsection{Data Retrieval}
+                    				Data Retrieval may be triggered either by the user or by the system as a sequence of use cases. Its function is to take a request and fetch all information related to the requested number plate. The retrieved data is stored onto the local database for display.
+                    		
+                    		\subsubsection{Display Results}
+                    				This function fetches the retrieved data from the local database. This data must be displayed on the screen as the camera's focus is on a scanned number plate whose details have been retrieved from the remote database. 
+                    				
+                    				
+                    		\subsubsection{Data Management}
+                    				This functionality is made available for the web application for management users. The function of this use case is to perform all CRUD on the remote database as well as viewing audit trails.
+                    				
+                    		\subsubsection{Audit Log}
+                    				This functionality makes sure that every operation that all kinds of users perform within the system are recorded. It is triggered upon successful completion of an operation.
+                    				
+                    \subsection{Use case prioritization}
+                    		\subsubsection{Critical}
+                    		\subsubsection{Important}
+                    		\subsubsection{Nice-To-Have}
+                    		
                    % \subsection{Use Case/Services contracts}
                    % \subsection{Process specifications}
                    % \subsection{Domain Objects}
