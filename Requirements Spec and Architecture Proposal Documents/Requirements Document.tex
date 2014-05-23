@@ -8,6 +8,8 @@
 \usepackage{graphicx} % Required to insert images
 \usepackage{listings} % Required for insertion of code
 \usepackage{courier} % Required for the courier font
+\usepackage{placeins} % Required to specify float barriers
+\usepackage{caption} % Required for table captions
 
 % Margins
 \topmargin=-0.45in
@@ -184,6 +186,15 @@
 		                			\item Domain Objects Layer
 		                			\item Backend Layer
                 			\end{itemize} 
+                			
+                			
+                			\begin{figure}[h]
+                                   \centering
+                                   \includegraphics[width=3.59in, height=3.75in]{Pictures/SystemArchitectureLayers.jpg}
+                                   \caption{System Layered Architecture}
+        					\end{figure}
+        					\FloatBarrier
+                			
                 			
                 			The responsibility allocation across the layers is as follows:
                 			\begin{enumerate}
