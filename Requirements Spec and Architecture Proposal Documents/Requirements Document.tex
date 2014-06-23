@@ -76,18 +76,18 @@
         \tableofcontents    
                 \newpage
                 \section{Introduction}
-                		This document contains a detailed specification how the augmented reality project is going to be carried out by the Gruners group. It will specify both functional and non-functional requirements and the architectural design for the application and quality requirements. All these will be coupled with use cases for a particular system functionality and the testing thereof. This document will use an agile methodology in a sense that it will be updated as per functionality requirement from the client. 
+                		This document contains a detailed specification how the augmented reality project is going to be carried out by the Gruners group. It will specify both functional and non-functional requirements and the architectural design for the system. All these will be coupled with use cases for each particular system functionality and the testing thereof. This document will use agile methodologies to promote adaptation of the process to possible requirements changes and many other amendments based on practical issues that will be encountered throughout the process. 
                	%input
                 \section{Vision and Scope}
                 		\subsection{Vision}
-                				The vision of the project is to develop a mobile application for smart phones that will enable the phone to detect vehicle number plates using a camera view and then overlaying on the display the information of the scanned vehicle. This application will then be used by mobile units to track vehicle statuses. 
+                				The vision of the project is to develop a mobile application for smart phones that will enable the phone to detect vehicle number plates using a camera view and then access, from the display, the information of the scanned vehicle in real-time. This application will then be used by mobile units to track vehicle statuses. For instance, whether the vehicle was stolen or not road-worthy.
                 		\subsection{Scope}
                 			
-                				The envisioned system is a mobile application, with a web front-end, which will allow the permittted users to do the following:
+                				The envisioned system is a mobile application, with a web front-end, which will allow the permitted users to do the following:
                 			    		\begin{itemize}
-                								\item scan through number plates with the android phone
-                				                \item receive the resulting information in a user-friendly display.
-                				                \item make all relavent CRUD operations, using a user-friendly web interface..
+                								\item scan through number plates for detection with the mobile application
+                				                \item view the resulting information per detection in a user-friendly display.
+                				                \item make all relavent CRUD operations, using a user-friendly web interface.
                 				                
                 			            \end{itemize}
                 			            
@@ -100,19 +100,19 @@
                 				
                 \section{Architectural Requirements Specification}
                 		\subsection{Access Channels }
-                				The envisioned system must be accessible by human users via the Android application and Web browsers.
+                				The envisioned system must be accessible by human users via the Android application (for number plate detections) and Web browsers (for management activities).
                 			
                 		\subsection{Quality Requirements}
                 		
                 				\subsubsection{Performance}
-		   			                  	The system must offer fast performance in detection of vehicle number plates as well as retrievals from the database.
+		   			                  	The system must offer fast performance in detection of vehicle number plates as well as retrievals from the database. 
 		   			                  	
                 			    \subsubsection{Accuracy}
-                			    		Number plate detections must be at accurate. Detections made on non-stationary vehicles must be possible.
+                			    		All detections must be verified for accuracy before the detection process continues.
                 			    		             	
                 				\subsubsection{Auditability}
 		   			                   	The system must maintain audits for all vital operations. These audit logs can then be provided upon request. 
-		   			            		%The feature to store a scanned vehicle whose info is not yet in the DB
+		   			            		
 		   			            		
                 				\subsubsection{Scalability}
 	   			                   		The system must allow multiple users to make use of the application without interruptions. This holds for both the Android application and the web application.
@@ -139,16 +139,16 @@
                 					\begin{itemize}
                 							\item Performance
 	                								\begin{itemize}
-						   			                  		\item Number plate detection must take less than 5 seconds.
+						   			                  		\item Number plate detection must take less than 5 seconds from application start-up.
 						   			                  		\item Retrieval of information from the database must take no longer than 1 second.
 						   			                \end{itemize}
                 								
                 							\item Accuracy
-			              							Number plate detections must be at least 99\% accurate. Detections made on non-stationary vehicles must be possible for vehicles at most 20 metres away from the scanning device.
+			              							Number plate detections must be at least 99.99\% accurate. Detections made on non-stationary vehicles must be possible for vehicles at most 20 metres away from the scanning device.
                								
                 							\item Auditability
 		               								\begin{itemize}
-		               									\item The system will make audits of all operations that alter the database. .
+		               									\item The system will make audits of all operations that alter the database.
 		               									\item The system will also maintain a history of all number plate scans successfully done.
 		               								\end{itemize}
 		               								
@@ -156,7 +156,7 @@
                 							\item Scalability
                 									\begin{itemize}
 					       				                  	\item The system must be able to scan all types of Southern African number plates.
-					       				                  	\item The system must be able to operate effectively and efficiently under a load of 100 concurrent android application users or 100 concurrent web interface users.
+					       				                  	\item The system must be able to operate effectively and efficiently under a load of 10000 concurrent android application users or 100 concurrent web interface users.
 					       			                \end{itemize}
 		               								
                 							\item Maintainability
@@ -169,11 +169,11 @@
                 					\end{itemize} 
                 			 
                 			\subsubsection{Integration and Access Channel Requirements}
-                					These are the dirrent channels through which the system can be accessed by all related users.
+                					These are the different channels through which the system can be accessed by all related users.
 	                				The system will be accessible by human users through the following channels:
 	                				
 			                    	\begin{enumerate}
-					                    	\item From the web browser throuch a user-friendly web interface. This implies that the system must be accessible from all widely used web browsers (including the most recent versions of Mozilla Firefox, Google Chrome, Apple Safari and Microsoft Internet Explorer).
+					                    	\item From the web browser through a user-friendly web interface. This implies that the system must be accessible from all widely used web browsers (including the most recent versions of Mozilla Firefox, Google Chrome, Apple Safari and Microsoft Internet Explorer).
 					                    	\item From mobile android devices using the Android application.
 			                    	\end{enumerate}  
 			                    	  
@@ -182,9 +182,9 @@
                 					\begin{enumerate}
                 							\item All system counterparts must be developed and attached to a JAVA RESTful Web Service.
                 							\item The business logic layer must provide an API for access to the SQL Database.
-                							\item The system will make use of the MySQL database.
+                							\item The system will make use of a MySQL database.
                 							\item The mobile client must run on an Android application.
-                							\item The system functionality will be hidden in a RESTful web services such that it is not exposed to any presentation layer counterpart.
+                							\item The system functionality will be hidden in a RESTful web service such that it is not exposed to any presentation layer counterpart.
                 					\end{enumerate}
                 				
                 			  
@@ -235,22 +235,35 @@
                     
                     \subsection{Required functionality}
                     		\subsubsection{Number Plate Detection}
-                    				The system's core function relies on the detection of number plates. The system allows the user to pan through the environment with their mobile phone. When the camera lens gets to a vehicle number plate, the application makes a detection of the number plate by scanning the digits character for character within the number plate region.
+                    				Upon opening the application, it displays a real-time view of the android device's rear camera. Using Augmented Reality, an orange box is drawn around a detected number plate. There may be multiple number plates in a scene. At this stage the "Detection Local Storage" use case is triggered to store the scanned number plates locally, after which the "Data Retrieval" use case is triggered to fetch data from the server. If the plate is not found or OK, then the box around the plate turns green and an audible tone indicates the check is complete. If the database returns a bad result (stolen, outstanding ticket, etc.), then the box should turn red and a different tone should be sound.
+                    				Clicking on a box will open the number plate details screen, displaying any additional information available.
+                    				\begin{figure}[h]
+					           				\centering
+					           				\includegraphics[width=6.25in, height=3.67in]{Pictures/NumberPlateDetectionUseCase.jpg}
+					           				\caption{Number Plate Detection Use Case Diagram}
+		           					\end{figure}
+                    				\FloatBarrier
                     				
                     				\begin{figure}[h]
 					           				\centering
-					           				\includegraphics[width=5.51in, height=3.77in]{Pictures/NumberPlateDetectionUseCase.jpg}
-					           				\caption{Number Plate Detection Use Case Diagram}
+					           				\includegraphics[width=6.25in, height=3.67in]{Pictures/NumberPlateDetectionActivity.jpg}
+					           				\caption{Number Plate Detection Activity Diagram}
 		           					\end{figure}
-                    			
-                    		\subsubsection{Storing Locally}
-                    				Once the mobile app has made a scan, this use case is triggered. The system needs to keep record of all the scans the user has made. So the system will store the stored number plate characters onto a local database. The system will then create a request for a database fetch of information related to the scanned number plate.
-                    		
+		                  				\FloatBarrier
+                    				
+                    		\subsubsection{Detection Local Storage}
+                    				Once the mobile application has made a detection, this use case is triggered just before data is requested from the database. The system needs to keep record of all the scans the user has made. So the system will store the detected number plate string onto a local database. All other features detected with the number plate will be stored locally as well (e.g. colour, make, type, model).
+                    				\begin{figure}[h]
+					           				\centering
+					           				\includegraphics[width=2.5in, height=2.21in]{Pictures/DetectionLocalStorageUseCase.jpg}
+					           				\caption{Detection Local Storage Use Case Diagram}
+		           					\end{figure}
+                    				\FloatBarrier
                     		\subsubsection{Data Retrieval}
-                    				Data Retrieval may be triggered either by the user or by the system as a sequence of use cases. Its function is to take a request and fetch all information related to the requested number plate. The retrieved data is stored onto the local database for display.
+                    				Data Retrieval may be triggered either by the user (via a searchable list of detected number plates stored locally) or by the system as a sequence of use cases. Its function is to retrieve information related to the requested number plate. Firstly, the application searches against its local database in case the information had already been retrieved in the current session. If there's no match, it makes an HTTP query to fetch data pertaining to a particular number plate. The retrieved data is stored onto the local database for display. This information is only kept locally per session. When the session is closed this storage is cleared to ensure that the next session retrieves the most recent data from the remote database.
                     		
                     		\subsubsection{Results Output}
-                    				This function fetches the retrieved data from the local database. This data must be displayed on the screen as the camera's focus is on a scanned number plate whose details have been retrieved from the remote database. 
+                    				When the user clicks on a number plate that was detected (Either from the live camera view or from the list of scanned number plates stored locally), this function fetches the retrieved data from the local database  and displays them on a screen.
                     				
                     				
                     		\subsubsection{Data Management}
@@ -273,7 +286,7 @@
                     				\begin{itemize}
 		                    				\item Data Management
 		                    				\item Audit Log
-		                    				\item Storing Locally
+		                    				\item Detection Local Storage
                     				\end{itemize}
                     		
                     		
@@ -289,7 +302,7 @@
                     		\end{itemize}
                     		\begin{figure}[h]
 		                             \centering
-		                             \includegraphics[width=4.59in, height=2.75in]{Pictures/CoreDomainObjects.jpg}
+		                             \includegraphics[width=6.25in, height=3.11in]{Pictures/CoreDomainObjects.jpg}
 		                             \caption{Core Domain Objects}
 		             		\end{figure}
                %\section{Glossary}
