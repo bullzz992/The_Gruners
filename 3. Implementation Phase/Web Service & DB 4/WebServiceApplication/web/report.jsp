@@ -110,7 +110,7 @@ $(document).ready(function(){
 						<a href="index.html">home</a>
 					</li>
 					<li class="selected">
-						<a href="report.html">Report</a>
+						<a href="report.jsp">Report</a>
 					</li>
 				</ul>
 				<ul class="secondary">
@@ -118,7 +118,7 @@ $(document).ready(function(){
 						<a href="edit.html">Edit</a>
 					</li>
 					<li>
-						<a href="insert.html">Insert</a>
+						<a href="insertion.jsp">Insert</a>
 					</li>
 				</ul>
 			</div>
