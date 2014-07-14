@@ -152,7 +152,7 @@ $(document).ready(function(){
 				</li>
 			</ul>
 			<p>
-				&copy; Copyright 2012. All rights reserved
+				&copy; Copyright 2014. All rights reserved
 			</p>
 		</div>
 	</div>

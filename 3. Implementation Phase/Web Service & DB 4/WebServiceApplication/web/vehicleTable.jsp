@@ -23,11 +23,11 @@
     <table border="1">
         <!-- column headers -->
         <tr>
-        <c:forEach var="columnName" items="${result.columnNames}">
-            <th><c:out value="${columnName}"/></th>
-        </c:forEach>
-    </tr>
-    <!-- column data -->
+            <c:forEach var="columnName" items="${result.columnNames}">
+                <th><c:out value="${columnName}"/></th>
+            </c:forEach>
+        </tr>
+        <!-- column data -->
     <c:forEach var="row" items="${result.rowsByIndex}">
         <tr>
         <c:forEach var="column" items="${row}">

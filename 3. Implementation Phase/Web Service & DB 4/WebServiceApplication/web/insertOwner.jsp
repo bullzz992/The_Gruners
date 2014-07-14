@@ -13,7 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form method="post" action="insert.jsp"> 
+        <form method="post" action="insertO.jsp"> 
         <table>
             <tr><td>Name:</td><td><input type="text" name="name"></td></tr>
             <tr><td>Type:</td><td><input type="text" name="type"></td></tr>

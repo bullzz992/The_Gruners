@@ -4,17 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/index.html</file>
-            <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/detectionTable.jsp</file>
             <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/connectionHeader.jsp</file>
             <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/insertOwner.jsp</file>
-            <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/ownerTable.jsp</file>
-            <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/auditlogTable.jsp</file>
-            <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/insertion.jsp</file>
+            <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/insertO.jsp</file>
             <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/insertVehicle.jsp</file>
-            <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/insert.jsp</file>
             <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/vehicleTable.jsp</file>
-            <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/report.jsp</file>
+            <file>file:/C:/Users/Jay/Documents/GitHub/The_Gruners/3.%20Implementation%20Phase/Web%20Service%20&amp;%20DB%204/WebServiceApplication/web/insertV.jsp</file>
         </group>
     </open-files>
 </project-private>
