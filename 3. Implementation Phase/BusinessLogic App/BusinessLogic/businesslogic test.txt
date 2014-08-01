@@ -1,0 +1,17 @@
+/*
+
+THIS IS WHAT NEEDS TO BE PUT ON THE TEXT RECOGNITION 
+                     * -------The code below is for testing purpose-----------
+                     */
+                    
+                    BusinessLogic access = new BusinessLogic();
+            		
+            		int ownerid = access.getOwnerID(words.get(0));
+            		words.add(access.getOwner(ownerid));
+            		access.closeConn();
+                    
+                    
+                    /*
+                     * -----------------DONE TESTING--------------------------
+                     * 
+                     */
