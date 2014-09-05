@@ -18,7 +18,7 @@
         <table>
             <tr><b>Vehicle Features</b></tr>
             <tr><td>Make:</td><td><input type="text" name="make"></td></tr>
-            <tr><td>Type:</td><td>  <input type="radio" name="type" value="Sedan">Sedan<br>
+            <tr><td>Type:</td><td>  <input type="radio" name="type" value="Sedan" checked>Sedan<br>
                                     <input type="radio" name="type" value="Hatch">Hatch<br>
                                     <input type="radio" name="type" value="SUV">SUV<br>
                                     <input type="radio" name="type" value="Van">Van<br>

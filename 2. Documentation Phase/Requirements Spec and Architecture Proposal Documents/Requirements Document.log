@@ -1,0 +1,417 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.23)  25 AUG 2014 23:25
+entering extended mode
+**Requirements*Document.tex
+
+("C:\Users\Jay\Documents\GitHub\The_Gruners\2. Documentation Phase\Requirements
+ Spec and Architecture Proposal Documents\Requirements Document.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\utf8x.def"
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucs.sty"
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-global.def"
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count88
+\uc@combtoks=\toks16
+\uc@combtoksb=\toks17
+\uc@temptokena=\toks18
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count89
+\calc@Bcount=\count90
+\calc@Adimen=\dimen104
+\calc@Bdimen=\dimen105
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count91
+\calc@Cskip=\skip45
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count92
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen106
+\Gin@req@width=\dimen107
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box26
+\AM@toc@title=\toks20
+\c@AM@survey=\count93
+\AM@templatesizebox=\box27
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
+Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\extramarks.sty"
+\@temptokenb=\toks21
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count94
+\lst@gtempboxa=\box28
+\lst@token=\toks22
+\lst@length=\count95
+\lst@currlwidth=\dimen108
+\lst@column=\count96
+\lst@pos=\count97
+\lst@lostspace=\dimen109
+\lst@width=\dimen110
+\lst@newlines=\count98
+\lst@lineno=\count99
+\lst@maxwidth=\dimen111
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count100
+\lst@skipnumbers=\count101
+\lst@framebox=\box29
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
+Package: placeins 2005/04/18  v 2.2
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen112
+\captionmargin@=\dimen113
+\captionwidth=\dimen114
+\caption@tempdima=\dimen115
+\caption@indent=\dimen116
+\caption@parindent=\dimen117
+\caption@hangindent=\dimen118
+)
+\c@ContinuedFloat=\count102
+Package caption Info: listings package is loaded.
+)
+("C:\Users\Jay\Documents\GitHub\The_Gruners\2. Documentation Phase\Requirements
+ Spec and Architecture Proposal Documents\Requirements Document.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+\AtBeginShipoutBox=\box30
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count103
+\scratchdimen=\dimen119
+\scratchbox=\box31
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen120
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks24
+)
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             macros/latex/contrib/pageslts/ 
+(lastpage)             or
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             install/macros/latex/contrib/pageslts.tds.zip
+(lastpage)             ! on input line 51.
+\c@lstlisting=\count109
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ <Pictures/csir.png, id=1, 128.73094pt x 82.05656pt>
+File: Pictures/csir.png Graphic file (type png)
+ <use Pictures/csir.png>
+Package pdftex.def Info: Pictures/csir.png used on input line 70.
+(pdftex.def)             Requested size: 91.78459pt x 78.77464pt.
+
+[1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Jay/Documents/Gi
+tHub/The_Gruners/2. Documentation Phase/Requirements Spec and Architecture Prop
+osal Documents/Pictures/csir.png>]
+("C:\Users\Jay\Documents\GitHub\The_Gruners\2. Documentation Phase\Requirements
+ Spec and Architecture Proposal Documents\Requirements Document.toc"
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 4.
+)
+\tf@toc=\write3
+ [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 88.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
+
+<Pictures/AbstractUseCase.jpg, id=13, 622.57594pt x 425.33907pt>
+File: Pictures/AbstractUseCase.jpg Graphic file (type jpg)
+
+<use Pictures/AbstractUseCase.jpg>
+Package pdftex.def Info: Pictures/AbstractUseCase.jpg used on input line 96.
+(pdftex.def)             Requested size: 398.20975pt x 272.46918pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3] [4 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requir
+ements Spec and Architecture Proposal Documents/Pictures/AbstractUseCase.jpg>]
+[5] [6]
+<Pictures/SystemArchitectureLayers.jpg, id=27, 405.76593pt x 423.83344pt>
+File: Pictures/SystemArchitectureLayers.jpg Graphic file (type jpg)
+
+<use Pictures/SystemArchitectureLayers.jpg>
+Package pdftex.def Info: Pictures/SystemArchitectureLayers.jpg used on input li
+ne 205.
+(pdftex.def)             Requested size: 259.45403pt x 271.01964pt.
+ [7 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requireme
+nts Spec and Architecture Proposal Documents/Pictures/SystemArchitectureLayers.
+jpg>]
+<Pictures/NumberPlateDetectionUseCase.jpg, id=32, 679.78969pt x 399.74344pt>
+File: Pictures/NumberPlateDetectionUseCase.jpg Graphic file (type jpg)
+
+<use Pictures/NumberPlateDetectionUseCase.jpg>
+Package pdftex.def Info: Pictures/NumberPlateDetectionUseCase.jpg used on input
+ line 242.
+(pdftex.def)             Requested size: 451.69142pt x 265.24048pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8]
+<Pictures/NumberPlateDetectionActivity.jpg, id=36, 702.37407pt x 414.79968pt>
+File: Pictures/NumberPlateDetectionActivity.jpg Graphic file (type jpg)
+
+<use Pictures/NumberPlateDetectionActivity.jpg>
+Package pdftex.def Info: Pictures/NumberPlateDetectionActivity.jpg used on inpu
+t line 249.
+(pdftex.def)             Requested size: 451.70421pt x 265.23671pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requiremen
+ts Spec and Architecture Proposal Documents/Pictures/NumberPlateDetectionUseCas
+e.jpg> <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requir
+ements Spec and Architecture Proposal Documents/Pictures/NumberPlateDetectionAc
+tivity.jpg>]
+<Pictures/DetectionLocalStorageUseCase.jpg, id=40, 273.27094pt x 240.9pt>
+File: Pictures/DetectionLocalStorageUseCase.jpg Graphic file (type jpg)
+
+<use Pictures/DetectionLocalStorageUseCase.jpg>
+Package pdftex.def Info: Pictures/DetectionLocalStorageUseCase.jpg used on inpu
+t line 258.
+(pdftex.def)             Requested size: 180.67625pt x 159.72229pt.
+ [10
+
+ <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requirements
+ Spec and Architecture Proposal Documents/Pictures/DetectionLocalStorageUseCase
+.jpg>]
+<Pictures/Screenshots_1.png, id=44, 1084.05pt x 1927.2pt>
+File: Pictures/Screenshots_1.png Graphic file (type png)
+
+<use Pictures/Screenshots_1.png>
+Package pdftex.def Info: Pictures/Screenshots_1.png used on input line 298.
+(pdftex.def)             Requested size: 216.80615pt x 385.40376pt.
+
+<Pictures/Screenshots_2.png, id=45, 1084.05pt x 1927.2pt>
+File: Pictures/Screenshots_2.png Graphic file (type png)
+
+<use Pictures/Screenshots_2.png>
+Package pdftex.def Info: Pictures/Screenshots_2.png used on input line 303.
+(pdftex.def)             Requested size: 216.80615pt x 385.40376pt.
+
+<Pictures/Screenshots_3.png, id=46, 1084.05pt x 1927.2pt>
+File: Pictures/Screenshots_3.png Graphic file (type png)
+
+<use Pictures/Screenshots_3.png>
+Package pdftex.def Info: Pictures/Screenshots_3.png used on input line 308.
+(pdftex.def)             Requested size: 216.80615pt x 385.40376pt.
+
+<Pictures/Screenshots_4.png, id=47, 1084.05pt x 1927.2pt>
+File: Pictures/Screenshots_4.png Graphic file (type png)
+
+<use Pictures/Screenshots_4.png>
+Package pdftex.def Info: Pictures/Screenshots_4.png used on input line 313.
+(pdftex.def)             Requested size: 216.80615pt x 385.40376pt.
+ [11] [12 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Req
+uirements Spec and Architecture Proposal Documents/Pictures/Screenshots_1.png>]
+ [13 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requirem
+ents Spec and Architecture Proposal Documents/Pictures/Screenshots_2.png>] [14 
+<C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requirements 
+Spec and Architecture Proposal Documents/Pictures/Screenshots_3.png>] [15 <C:/U
+sers/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requirements Spec 
+and Architecture Proposal Documents/Pictures/Screenshots_4.png>]
+<Pictures/CoreDomainObjects.jpg, id=64, 612.03656pt x 317.68687pt>
+File: Pictures/CoreDomainObjects.jpg Graphic file (type jpg)
+
+<use Pictures/CoreDomainObjects.jpg>
+Package pdftex.def Info: Pictures/CoreDomainObjects.jpg used on input line 327.
+
+(pdftex.def)             Requested size: 451.6859pt x 224.7691pt.
+ 
+AED: lastpage setting LastPage
+[16 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requireme
+nts Spec and Architecture Proposal Documents/Pictures/CoreDomainObjects.jpg>]
+("C:\Users\Jay\Documents\GitHub\The_Gruners\2. Documentation Phase\Requirements
+ Spec and Architecture Proposal Documents\Requirements Document.aux") ) 
+Here is how much of TeX's memory you used:
+ 5490 strings out of 493921
+ 84470 string characters out of 3144882
+ 162856 words of memory out of 3000000
+ 8713 multiletter control sequences out of 15000+200000
+ 8500 words of font info for 30 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 37i,7n,39p,784b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Requirements Document.pdf" (16 pages, 6029058 bytes).
+PDF statistics:
+ 79 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+

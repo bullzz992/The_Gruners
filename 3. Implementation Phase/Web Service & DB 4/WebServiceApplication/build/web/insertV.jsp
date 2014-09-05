@@ -28,39 +28,15 @@
     
     
     <!-- 
-        #This query inserts a feature object if no such
-        #feature already exists in the database
+        #This query inserts a feature object 
     -->
     
-   
-        
-    <sql:query var="findDuplicates" dataSource="${dataSource}">
-
-        SELECT COUNT(*) FROM vehiclefeatures WHERE make = '<%=request.getParameter("make")%>' AND type = '<%=request.getParameter("type")%>' AND model = '<%=request.getParameter("model")%>' AND colour = '<%=request.getParameter("colour")%>'
-        
-    </sql:query>
-    
-    <c:forEach var="row" items="${findDuplicates.rowsByIndex}">
-
-        <c:forEach var="column" items="${row}">
-            <c:set var="foundDuplicates" scope="session" value="${column}"/>
-
-        </c:forEach>
-
-    </c:forEach>
-       
-        
-        
-    <c:if test="${findDuplicates < 1}">
-
-        <sql:update var="insertFeature" dataSource="${dataSource}">
+     <sql:update var="insertFeature" dataSource="${dataSource}">
             INSERT INTO vehiclefeatures values (?, '<%=request.getParameter("make")%>', '<%=request.getParameter("type")%>', '<%=request.getParameter("model")%>', '<%=request.getParameter("colour")%>')
             <sql:param value="${IncrementedFeatureID}" />
 
 
-        </sql:update>
-    </c:if>
-    
+     </sql:update>
     
     <!--
         # This part fetches the Owner ID or get number
@@ -104,19 +80,7 @@
         #This part fecthes the current feature id that matches 
         #the entered features.
     -->
-    <sql:query var="getCurrentFeature" dataSource="${dataSource}">
-
-        SELECT feature_id FROM vehiclefeatures WHERE make = '<%=request.getParameter("make")%>' AND type = '<%=request.getParameter("type")%>' AND model = '<%=request.getParameter("model")%>' AND colour = '<%=request.getParameter("colour")%>');
-    </sql:query>
-
-    <c:forEach var="row" items="${getCurrentFeature.rowsByIndex}">
-
-        <c:forEach var="column" items="${row}">
-            <c:set var="returnedCurrentFeature" scope="session" value="${column}"/>
-
-        </c:forEach>
-
-    </c:forEach>
+    
       
     
     
@@ -124,9 +88,9 @@
    
         INSERT INTO vehicle 
         VALUES (?,'<%=request.getParameter("plate")%>', ?, ?,'<%=request.getParameter("stolen")%>', '<%=request.getParameter("fines")%>', '<%=request.getParameter("roadworthy")%>')
-        <sql:param value="${returnedVehicleID}" />
+        <sql:param value="${IncrementedVehicleID}" />
         <sql:param value="${returnedOwnerID}" />
-        <sql:param value="${returnedCurrentFeature}" />
+        <sql:param value="${IncrementedFeatureID}" />
         
     </sql:update>
     <%
