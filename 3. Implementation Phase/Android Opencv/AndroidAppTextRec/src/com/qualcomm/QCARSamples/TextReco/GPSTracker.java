@@ -177,19 +177,19 @@ public class GPSTracker extends Service implements LocationListener {
         alertDialog.show();
 	}
 
-	@Override
+	//@Override
 	public void onLocationChanged(Location location) {
 	}
 
-	@Override
+	//@Override
 	public void onProviderDisabled(String provider) {
 	}
 
-	@Override
+	//@Override
 	public void onProviderEnabled(String provider) {
 	}
 
-	@Override
+	//@Override
 	public void onStatusChanged(String provider, int status, Bundle extras) {
 	}
 
