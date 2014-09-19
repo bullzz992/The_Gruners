@@ -10,6 +10,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="livevalidation_prototype.js" type="text/javascript"></script>
+        <script src="validate.js" type="text/javascript"></script>
         <title>JSP Page</title>
     </head>
     <body>
