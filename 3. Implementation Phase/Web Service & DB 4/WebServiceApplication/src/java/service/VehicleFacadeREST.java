@@ -26,6 +26,7 @@ import javax.ws.rs.Produces;
  */
 @Stateless
 @Path("entity.vehicle")
+@Consumes({"application/xml", "application/json"})
 public class VehicleFacadeREST extends AbstractFacade<Vehicle> {
     @PersistenceContext(unitName = "WebServiceApplicationPU")
     private EntityManager em;
