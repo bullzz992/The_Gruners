@@ -43,19 +43,14 @@ public class Utils {
 	{
 		String result = source;
 		
-		if(source.length() == 8)
-			result = correctNumber(source.substring(0, 2)) + "-" + source.substring(2, 4) + " " + correctNumber(source.substring(4, 8));
-		else if (source.length() == 9) 
-			result = correctNumber(source.substring(0, 2)) + "-" + source.substring(2, 4) + " " + correctNumber(source.substring(4, 7)) + "." + correctNumber((source.substring(7, 9)));
-		else
-			result = "";
+		
 		return result;
 	}
 	
 	public String correctNumber(String source)
 	{
 		char[] sourceArray = source.toCharArray();
-		for(int index = 0; index < sourceArray.length; index++)
+		/*for(int index = 0; index < sourceArray.length; index++)
 		{
 			if(sourceArray[index] == 'Z')
 				sourceArray[index] = '2';
@@ -63,7 +58,7 @@ public class Utils {
 				sourceArray[index] = '5';
 			else if (sourceArray[index] == 'D')
 				sourceArray[index] = '0';			
-		}
+		}*/
 				
 		return String.valueOf(sourceArray);
 	}
