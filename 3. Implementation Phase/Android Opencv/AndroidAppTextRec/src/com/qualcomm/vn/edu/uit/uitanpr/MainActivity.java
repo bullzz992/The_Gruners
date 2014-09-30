@@ -501,9 +501,9 @@ public class MainActivity extends Activity implements OnTaskCompleted, GPSCallba
 
 							int cx = boundingRect.x + (boundingRect.width / 2);
 							int cy = boundingRect.y + (boundingRect.height / 2);
-
+							Log.e(TAG, "Width and Height: " + cx + " ---------------- " + cy);
 							Point centroid = new Point(cx, cy);
-
+							
 							if (centroid.y >= 120 && centroid.y <= 400
 									&& centroid.x >= 100 && centroid.x <= 590) {
 
