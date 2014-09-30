@@ -81,40 +81,42 @@ containing a value of this type.
         public static final int splash=0x7f020008;
     }
     public static final class id {
-        public static final int ImageView01=0x7f050006;
-        public static final int action_settings=0x7f050017;
+        public static final int action_settings=0x7f050019;
         public static final int any=0x7f050000;
         public static final int back=0x7f050001;
-        public static final int btnCapture=0x7f050009;
-        public static final int btnCapturePlate=0x7f050005;
-        public static final int btnHelp=0x7f050008;
+        public static final int btnCapture=0x7f05000d;
+        public static final int btnHelp=0x7f05000c;
+        public static final int code=0x7f050003;
+        public static final int expandableList=0x7f050007;
         public static final int front=0x7f050002;
-        public static final int image=0x7f05000a;
-        public static final int imageView1=0x7f050003;
-        public static final int imageView2=0x7f050004;
-        public static final int imageView3=0x7f050007;
-        public static final int leftMargin=0x7f05000e;
-        public static final int loading_indicator=0x7f05000c;
-        public static final int loupe=0x7f05000f;
-        public static final int loupeLayout=0x7f05000d;
-        public static final int mainFrame=0x7f050012;
-        public static final int progressBar1=0x7f050014;
-        public static final int rightMargin=0x7f050010;
-        public static final int status_view_top=0x7f050013;
-        public static final int text=0x7f050016;
-        public static final int toast_layout_root=0x7f050015;
-        public static final int topMargin=0x7f05000b;
-        public static final int wordList=0x7f050011;
+        public static final int heading=0x7f050008;
+        public static final int image=0x7f05000e;
+        public static final int imageView1=0x7f05000a;
+        public static final int imageView2=0x7f050009;
+        public static final int imageView3=0x7f05000b;
+        public static final int leftMargin=0x7f050012;
+        public static final int loading_indicator=0x7f050010;
+        public static final int loupe=0x7f050013;
+        public static final int loupeLayout=0x7f050011;
+        public static final int mainFrame=0x7f050016;
+        public static final int name=0x7f050004;
+        public static final int population=0x7f050005;
+        public static final int progressBar1=0x7f050018;
+        public static final int rightMargin=0x7f050014;
+        public static final int search=0x7f050006;
+        public static final int status_view_top=0x7f050017;
+        public static final int topMargin=0x7f05000f;
+        public static final int wordList=0x7f050015;
     }
     public static final class layout {
-        public static final int capture=0x7f030000;
-        public static final int home=0x7f030001;
-        public static final int listrow=0x7f030002;
-        public static final int loupe_overlay=0x7f030003;
-        public static final int main=0x7f030004;
-        public static final int result=0x7f030005;
-        public static final int splash=0x7f030006;
-        public static final int toast=0x7f030007;
+        public static final int details=0x7f030000;
+        public static final int detections=0x7f030001;
+        public static final int group=0x7f030002;
+        public static final int home=0x7f030003;
+        public static final int listrow=0x7f030004;
+        public static final int loupe_overlay=0x7f030005;
+        public static final int main=0x7f030006;
+        public static final int splash=0x7f030007;
     }
     public static final class menu {
         public static final int splash=0x7f0a0000;
