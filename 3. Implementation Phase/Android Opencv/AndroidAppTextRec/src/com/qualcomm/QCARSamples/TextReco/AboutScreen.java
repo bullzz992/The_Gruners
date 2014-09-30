@@ -50,7 +50,7 @@ public class AboutScreen extends Activity implements OnClickListener
     }
     private void startHistory()
     {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, History.class);
         startActivity(i);
     }
 

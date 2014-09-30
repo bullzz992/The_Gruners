@@ -4,9 +4,9 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry exported="true" kind="lib" path="C:/Development/Android/vuforia-sdk-android-2-8-8/build/java/vuforia/Vuforia.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Jay/Documents/GitHub/The_Gruners/3. Implementation Phase/Needed Jar API files/java-json.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Jay/Documents/GitHub/The_Gruners/3. Implementation Phase/Needed Jar API files/javax.ws.rs-api-2.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Jay/Documents/GitHub/The_Gruners/3. Implementation Phase/Needed Jar API files/jersey-client.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Joas Mogale/Desktop/Main Project/The_Gruners/3. Implementation Phase/Needed Jar API files/java-json.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Joas Mogale/Desktop/Main Project/The_Gruners/3. Implementation Phase/Needed Jar API files/javax.ws.rs-api-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Joas Mogale/Desktop/Main Project/The_Gruners/3. Implementation Phase/Needed Jar API files/jersey-client.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>
