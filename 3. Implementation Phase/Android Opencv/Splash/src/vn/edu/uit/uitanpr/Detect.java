@@ -115,7 +115,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 	private double latitude = 0.0;
 	private double longitude = 0.0;
 	
-	private ServiceClientWrapper restClientObject;
+	//private ServiceClientWrapper restClientObject;
 
 	private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
 		@Override
@@ -125,7 +125,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 				Log.i(TAG, "OpenCV loaded successfully");
 				
 				//Perform Server actions (Populate JSON ARRAY For local Fetching)
-				restClientObject = new ServiceClientWrapper();
+				//restClientObject = new ServiceClientWrapper();
 				//--------------------------------------------
 				
 				try {

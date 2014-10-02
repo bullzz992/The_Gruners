@@ -21,11 +21,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.util.Log;
+
 
 public class ServiceClientWrapper {
 	
 	public JSONArray owners;
 	public JSONArray vehicles;
+	public JSONArray features;
 	
 	
 	public ServiceClientWrapper()
@@ -51,10 +54,11 @@ public class ServiceClientWrapper {
 	        }
 	            
 	        owners = new JSONArray(line);
+	        //Log.i("I'm here------------Features---------------", "Found: " + owners);
 		}
 		catch(Exception ex)
 		{
-			
+			Log.i("I'm here------------Features---------------", "Found: " + owners + ex.getLocalizedMessage());
 		}
 		
 		//Populate Vehicle JSON ARRAY
@@ -78,11 +82,39 @@ public class ServiceClientWrapper {
 	        }
 	            
 	        vehicles = new JSONArray(line);
+	        //Log.i("I'm here------------Features---------------", "Found: " + vehicles);
 		}catch(Exception ex)
 		{
-			
+			Log.i("I'm here------------Features---------------", "Found: " + vehicles + ex.getMessage());
 		}
 		
+		//PopulateFeatures
+		//http://localhost:8080/WebServiceApplication/webresources/entity.vehiclefeatures
+		try
+		{
+			String sampleURL = "http://192.168.43.226:8080/WebServiceApplication/webresources/entity.vehiclefeatures";
+			
+			HttpGet  get = new HttpGet(sampleURL);
+			
+			get.addHeader("accept", "application/json");
+			
+			HttpClient httpclient = new DefaultHttpClient();
+			
+	        HttpResponse response = httpclient.execute(get);
+	       
+			Scanner in = new Scanner(response.getEntity().getContent());
+	        String line ="";
+	            
+	        while(in.hasNextLine()){
+	            line += in.nextLine();
+	        }
+	            
+	        features = new JSONArray(line);
+	        //Log.i("I'm here------------Features---------------", "Found: " + features);
+		}catch(Exception ex)
+		{
+			Log.i("I'm here------------Features---------------", "Found: " + features + ex.getCause());
+		}
 		
 	}
 	
@@ -92,7 +124,7 @@ public class ServiceClientWrapper {
 		for (int i = 0; i < owners.length(); i++) {
 		    JSONObject proj = owners.getJSONObject(i);
 		    
-		    if(proj.getInt("ownerId")  == 1)
+		    if(proj.getInt("ownerId")  == id)
 		    {
 		    	result = proj;
 		    	break;
@@ -103,6 +135,22 @@ public class ServiceClientWrapper {
 	}
 	
 
+	public JSONObject getFeatureDetails(int id) throws JSONException
+	{
+		JSONObject result = null;
+		for (int i = 0; i < features.length(); i++) {
+		    JSONObject proj = features.getJSONObject(i);
+		    
+		    if(proj.getInt("featureId")  == id)
+		    {
+		    	result = proj;
+		    	break;
+		    }
+		    
+		}
+		return result;
+	}
+	
 	
 	public JSONObject getVehicleDetails(String num) throws JSONException
 	{
@@ -110,7 +158,7 @@ public class ServiceClientWrapper {
 		for (int i = 0; i < vehicles.length(); i++) {
 		    JSONObject proj = vehicles.getJSONObject(i);
 		    
-		    if(proj.get("numer_plate")  == num)
+		    if(proj.getString("numberPlate").equalsIgnoreCase(num))
 		    {
 		    	result = proj;
 		    	break;
@@ -123,16 +171,54 @@ public class ServiceClientWrapper {
 	public int getOwnerID(String num) throws JSONException
 	{
 		int result = -1;
-		for (int i = 0; i < owners.length(); i++) {
-		    JSONObject proj = owners.getJSONObject(i);
+		for (int i = 0; i < vehicles.length(); i++) {
+		    JSONObject proj = vehicles.getJSONObject(i);
 		    
-		    if(proj.get("numer_plate")  == num)
+		    if(proj.getString("numberPlate").equalsIgnoreCase(num))
 		    {
-		    	result = proj.getInt("owner_id");
+		    	result = proj.getInt("ownerId");
 		    	break;
 		    }
 		    
 		}
+		return result;
+	}
+	
+	
+	public int getFeatureID(String num) throws JSONException
+	{
+		int result = -1;
+		for (int i = 0; i < vehicles.length(); i++) {
+		    JSONObject proj = vehicles.getJSONObject(i);
+		    
+		    if(proj.getString("numberPlate").equalsIgnoreCase(num))
+		    {
+		    	result = proj.getInt("featureId");
+		    	break;
+		    }
+		    
+		}
+		return result;
+	}
+	
+	public boolean vehicleFound(String num) throws JSONException
+	{
+		//Log.i("I'm here-------------------------------------", "Checking if vehicle is found: "+ vehicles + "--" + owners); 
+		boolean result = false;
+		//Log.i("I'm here------------Loop Count---------------", "Num Vehicles: " + vehicles.length());
+		for (int i = 0; i < vehicles.length(); i++) {
+			//Log.i("I'm here------------Loop Count---------------", "Found: " + result);
+		    JSONObject proj = vehicles.getJSONObject(i);
+		    //Log.i("I'm here------------Loop Count---------------", "Found: " + proj.getString("numberPlate") + " --- " + num);
+		    if(proj.getString("numberPlate").equals(num))
+		    {
+		    	result = true;
+		    	Log.i("Found Function-------------------------------------", "Found: " + result); 
+		    	break;
+		    }
+		    
+		}
+		Log.i("OUT OF LOOP-------------------------------------", "Found: " + result);
 		return result;
 	}
 	
