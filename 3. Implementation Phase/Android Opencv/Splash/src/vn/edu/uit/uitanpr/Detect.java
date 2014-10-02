@@ -33,10 +33,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInput;
 import java.io.ObjectInputStream;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -196,7 +198,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 				layout.addView(plateView, 2);
 
 				resultOCR = new TextView(getApplicationContext());
-				resultOCR.setText("Welcome to UIT-ANPR");
+				resultOCR.setText("Hold device still to make detection.");
 				layout.addView(resultOCR, 3);
 				RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
 						resultOCR.getLayoutParams());
@@ -204,13 +206,18 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 				lp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 				lp.setMargins(0, 0, 0, 10);
 				resultOCR.setTextSize(18);
-				resultOCR.setBackgroundColor(Color.WHITE);
-				resultOCR.setTextColor(Color.RED);
+				resultOCR.setBackgroundColor(Color.TRANSPARENT);
+				resultOCR.setTextColor(Color.GREEN);
 				resultOCR.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
 				resultOCR.setLayoutParams(lp);
 				
+				
+				Calendar c = Calendar.getInstance();
+				SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy");
+				String strDate = sdf.format(c.getTime());
+				
 				gpsInfo = new TextView(getApplicationContext());
-				gpsInfo.setText("Waiting for GPS...");
+				gpsInfo.setText(strDate);
 				layout.addView(gpsInfo, 3);
 				RelativeLayout.LayoutParams lpGPS = new RelativeLayout.LayoutParams(
 						gpsInfo.getLayoutParams());
@@ -219,7 +226,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 				lpGPS.setMargins(0, 0, 0, 10);
 				gpsInfo.setTextSize(15);
 				gpsInfo.setBackgroundColor(Color.WHITE);
-				gpsInfo.setTextColor(Color.RED);
+				gpsInfo.setTextColor(Color.MAGENTA);
 				gpsInfo.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
 				gpsInfo.setLayoutParams(lpGPS);
 			} catch (IOException e1) {
@@ -824,7 +831,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 
 	public void onGPSUpdate(Location location) {
 		// TODO Auto-generated method stub
-		latitude = location.getLatitude();
+		/*latitude = location.getLatitude();
 		longitude = location.getLongitude();
 		speed = location.getSpeed();
 
@@ -835,7 +842,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 		gpsInfoText += "Long: " + longitude + "\n";
 		gpsInfoText += "Speed: " + speedString + " " + unitString;
 
-		gpsInfo.setText(gpsInfoText);
+		gpsInfo.setText(gpsInfoText);*/
 	}
 
 }
