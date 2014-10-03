@@ -60,7 +60,7 @@
           \large
           
              Mbulungo Musetsho                          (10176382)  \\[1em]
-             Ndivhuwo Nthambeleni 						(10001183)	\\[1em]
+             Ndivhuwo Nthambeleni 						(10001183) (Inactive)	\\[1em]
              Joas Mogale 								(10354167)	\\[1em]
                 %Enter your details below just as the one above
             
@@ -76,14 +76,14 @@
         \tableofcontents    
                 \newpage
                 \section{Introduction}
-                		This document contains a detailed specification how the augmented reality project is going to be carried out by the Gruners group. It will specify both functional and non-functional requirements and the architectural design for the system. All these will be coupled with use cases for each particular system functionality and the testing thereof. This document will use agile methodologies to promote adaptation of the process to possible requirements changes and many other amendments based on practical issues that will be encountered throughout the process. 
+                		This document contains a detailed specification how the Augmented Reality Number Plate Detection project is going to be carried out by The Gruners group. It will specify both functional and non-functional requirements and the architectural design specifications for the system. All these will be coupled with use cases for each particular system functionality and the testing thereof. This document will use Agile Methodologies to promote adaptation of the process to possible requirements changes and many other amendments based on practical issues that will be encountered throughout the process. 
                	%input
                 \section{Vision and Scope}
                 		\subsection{Vision}
                 				The vision of the project is to develop a mobile application for smart phones that will enable the phone to detect vehicle number plates using a camera view and then access, from the display, the information of the scanned vehicle in real-time. This application will then be used by mobile units to track vehicle statuses. For instance, whether the vehicle was stolen or not road-worthy.
                 		\subsection{Scope}
                 			
-                				The envisioned system is a mobile application, with a web front-end, which will allow the permitted users to do the following:
+                				The envisioned system is a mobile application, with a web front application sub-system, which will allow the permitted users to do the following:
                 			    		\begin{itemize}
                 								\item scan through number plates for detection with the mobile application
                 				                \item view the resulting information per detection in a user-friendly display.
@@ -112,16 +112,12 @@
                 			    		             	
                 				\subsubsection{Auditability}
 		   			                   	The system must maintain audits for all vital operations. These audit logs can then be provided upon request. 
-		   			            		
-		   			            		
-                				\subsubsection{Scalability}
-	   			                   		The system must allow multiple users to make use of the application without interruptions. This holds for both the Android application and the web application.
 		       			                  	
                					\subsubsection{Maintainability}
 					                  	All layers of the system must be developer-friendly. - That is, the design and development of the system must allow smooth maintenance of all the system's counterparts.
        						    
        						    \subsubsection{Usability}
-			    	                  	The system must allow all users to be able to interact with it without any major difficulties.
+			    	                  	The system must allow all users to be able to interact with the system without any major difficulties.
        						    	                  	
                 
                 		\subsection{Architecture Constraints}
@@ -149,18 +145,11 @@
                 							\item Auditability
 		               								\begin{itemize}
 		               									\item The system will make audits of all operations that alter the database.
-		               									\item The system will also maintain a history of all number plate scans successfully done.
+		               									\item The system will also maintain a history of all number plate detections successfully done.
 		               								\end{itemize}
-		               								
-		               								
-                							\item Scalability
-                									\begin{itemize}
-					       				                  	\item The system must be able to scan all types of Southern African number plates.
-					       				                  	\item The system must be able to operate effectively and efficiently under a load of 10000 concurrent android application users or 100 concurrent web interface users.
-					       			                \end{itemize}
-		               								
+		               									
                 							\item Maintainability
-                									To implement maintainability, the system will make use of a layered architecture that separates certain counterparts such that maintaining a subsystem does not, in any means, affect any other subsystem.
+                									To implement maintainability, the system will make use of a Layered Architecture that separates certain counterparts such that maintaining a subsystem does not, in any means, affect any other subsystem.
 		              								
                 							\item Usability
                 									An average user must be able to use the system without any further training or extensive manual consultation required. This will be achieved by the use of design principles to enhance user experience.
@@ -181,7 +170,7 @@
                 					The following architecture constraints will be followed mainly for maintainability reasons:
                 					\begin{enumerate}
                 							\item All system counterparts must be developed and attached to a JAVA RESTful Web Service.
-                							\item The business logic layer must provide an API for access to the SQL Database.
+                							\item The business logic layer must provide an API for access to the SQL Database via REST service requests.
                 							\item The system will make use of a MySQL database.
                 							\item The mobile client must run on an Android application.
                 							\item The system functionality will be hidden in a RESTful web service such that it is not exposed to any presentation layer counterpart.
@@ -226,6 +215,7 @@
 								\item HTML 5
 								\item JAVA Programming Language
 								\item Qualcomm Vuforia Augmented Reallity SDK
+								\item OPENCV (For Optical Character Recognition)
 								\item MySQL Database for JDBC
 							\end{itemize}
                     
@@ -235,8 +225,8 @@
                     
                     \subsection{Required functionality}
                     		\subsubsection{Number Plate Detection}
-                    				Upon opening the application, it displays a real-time view of the android device's rear camera. Using Augmented Reality, an orange box is drawn around a detected number plate. There may be multiple number plates in a scene. At this stage the "Detection Local Storage" use case is triggered to store the scanned number plates locally, after which the "Data Retrieval" use case is triggered to fetch data from the server. If the plate is not found or OK, then the box around the plate turns green and an audible tone indicates the check is complete. If the database returns a bad result (stolen, outstanding ticket, etc.), then the box should turn red and a different tone should be sound.
-                    				Clicking on a box will open the number plate details screen, displaying any additional information available.
+                    				Upon opening the Detection screen from a main menu, the application displays a real-time view of the android device's rear camera. Using Augmented Reality, an orange box is drawn around a detected number plate. There may be multiple number plates in a scene. At this stage the "Detection Local Storage" use case is triggered to store the scanned number plates locally, after which the "Data Retrieval" use case is triggered to fetch data from the server. If the plate is not found or OK, then the box around the plate turns green and an audible tone indicates that the data retrieval process is complete. If the database returns a bad result (stolen, fines, or not roadworthy), then the box should turn red and a different tone should be played to notify the user.
+                    				The user will then select Detection History from the application's main menu to view further information about the detected number plate(s).
                     				\begin{figure}[h]
 					           				\centering
 					           				\includegraphics[width=6.25in, height=3.67in]{Pictures/NumberPlateDetectionUseCase.jpg}
@@ -252,7 +242,7 @@
 		                  				\FloatBarrier
                     				
                     		\subsubsection{Detection Local Storage}
-                    				Once the mobile application has made a detection, this use case is triggered just before data is requested from the database. The system needs to keep record of all the scans the user has made. So the system will store the detected number plate string onto a local database. All other features detected with the number plate will be stored locally as well (e.g. colour, make, type, model).
+                    				Once the mobile application has made a detection, this use case is triggered just before data is requested from the database. The system needs to keep record of all the detections that the user has made. So the system will store the detected number plate string onto a local database. All other features detected with the number plate will be stored locally as well (e.g. colour, make, type, model).
                     				\begin{figure}[h]
 					           				\centering
 					           				\includegraphics[width=2.5in, height=2.21in]{Pictures/DetectionLocalStorageUseCase.jpg}
@@ -263,7 +253,7 @@
                     				Data Retrieval may be triggered either by the user (via a searchable list of detected number plates stored locally) or by the system as a sequence of use cases. Its function is to retrieve information related to the requested number plate. Firstly, the application searches against its local database in case the information had already been retrieved in the current session. If there's no match, it makes an HTTP query to fetch data pertaining to a particular number plate. The retrieved data is stored onto the local database for display. This information is only kept locally per session. When the session is closed this storage is cleared to ensure that the next session retrieves the most recent data from the remote database.
                     		
                     		\subsubsection{Results Output}
-                    				When the user clicks on a number plate that was detected (Either from the live camera view or from the list of scanned number plates stored locally), this function fetches the retrieved data from the local database  and displays them on a screen.
+                    				When the user clicks on a number plate that was detected (from the list of detected number plates stored locally), this function fetches the retrieved data from the database  and displays them on a screen.
                     				
                     				
                     		\subsubsection{Data Management}
@@ -295,24 +285,39 @@
                     		Below is a sequence of screenshots taken from an Android device for the Android Application of this system.
                     		\begin{figure}[tp]
 		                             \centering
-		                             \includegraphics[width=3in, height=5.333in]{Pictures/Screenshots_1.png}
+		                             \includegraphics[width=3in, height=5.333in]{Pictures/Interface_1.png}
 		                             \caption{Android Screenshot 1}
 		              		\end{figure}
 							\begin{figure}[tp]
 		                             \centering
-		                             \includegraphics[width=3in, height=5.333in]{Pictures/Screenshots_2.png}
+		                             \includegraphics[width=3in, height=5.333in]{Pictures/Interface_2.png}
 		                             \caption{Android Screenshot 2}
 		              		\end{figure}
 							\begin{figure}[tp]
 		                             \centering
-		                             \includegraphics[width=3in, height=5.333in]{Pictures/Screenshots_3.png}
+		                             \includegraphics[width=3in, height=5.333in]{Pictures/Interface_3.png}
 		                             \caption{Android Screenshot 3}
 		              		\end{figure}
 							\begin{figure}[tp]
 		                             \centering
-		                             \includegraphics[width=3in, height=5.333in]{Pictures/Screenshots_4.png}
+		                             \includegraphics[width=3in, height=5.333in]{Pictures/Interface_4.png}
 		                             \caption{Android Screenshot 4}
-		              		\end{figure}                    
+		              		\end{figure}  
+		              		\begin{figure}[tp]
+                             		\centering
+                             		\includegraphics[width=3in, height=5.333in]{Pictures/Interface_5.png}
+                            		\caption{Android Screenshot 5}
+           				   	\end{figure}
+           				    \begin{figure}[tp]
+		                             \centering
+		                             \includegraphics[width=3in, height=5.333in]{Pictures/Interface_6.png}
+		                             \caption{Android Screenshot 6}
+       				   		\end{figure}
+			 		   		\begin{figure}[tp]
+			                         \centering
+			                         \includegraphics[width=3in, height=5.333in]{Pictures/Interface_7.png}
+			                         \caption{Android Screenshot 7}
+			 	     		\end{figure}                  
                     \FloatBarrier
                     \subsection{Domain Objects}
                     		This section introduces core domain concepts and aspects of the requirements which are used across different use cases.

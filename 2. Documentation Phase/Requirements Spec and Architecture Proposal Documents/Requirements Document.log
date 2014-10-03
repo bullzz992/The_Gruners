@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.23)  25 AUG 2014 23:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.23)  3 OCT 2014 02:59
 entering extended mode
 **Requirements*Document.tex
 
@@ -298,23 +298,26 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3] [4 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requir
 ements Spec and Architecture Proposal Documents/Pictures/AbstractUseCase.jpg>]
-[5] [6]
-<Pictures/SystemArchitectureLayers.jpg, id=27, 405.76593pt x 423.83344pt>
+[5] <Pictures/SystemArchitectureLayers.jpg, id=24, 405.76593pt x 423.83344pt>
 File: Pictures/SystemArchitectureLayers.jpg Graphic file (type jpg)
 
 <use Pictures/SystemArchitectureLayers.jpg>
 Package pdftex.def Info: Pictures/SystemArchitectureLayers.jpg used on input li
-ne 205.
+ne 194.
 (pdftex.def)             Requested size: 259.45403pt x 271.01964pt.
- [7 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requireme
-nts Spec and Architecture Proposal Documents/Pictures/SystemArchitectureLayers.
-jpg>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6] [7 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requir
+ements Spec and Architecture Proposal Documents/Pictures/SystemArchitectureLaye
+rs.jpg>]
 <Pictures/NumberPlateDetectionUseCase.jpg, id=32, 679.78969pt x 399.74344pt>
 File: Pictures/NumberPlateDetectionUseCase.jpg Graphic file (type jpg)
 
 <use Pictures/NumberPlateDetectionUseCase.jpg>
 Package pdftex.def Info: Pictures/NumberPlateDetectionUseCase.jpg used on input
- line 242.
+ line 232.
 (pdftex.def)             Requested size: 451.69142pt x 265.24048pt.
 
 
@@ -326,7 +329,7 @@ File: Pictures/NumberPlateDetectionActivity.jpg Graphic file (type jpg)
 
 <use Pictures/NumberPlateDetectionActivity.jpg>
 Package pdftex.def Info: Pictures/NumberPlateDetectionActivity.jpg used on inpu
-t line 249.
+t line 239.
 (pdftex.def)             Requested size: 451.70421pt x 265.23671pt.
 
 
@@ -342,76 +345,103 @@ File: Pictures/DetectionLocalStorageUseCase.jpg Graphic file (type jpg)
 
 <use Pictures/DetectionLocalStorageUseCase.jpg>
 Package pdftex.def Info: Pictures/DetectionLocalStorageUseCase.jpg used on inpu
-t line 258.
+t line 248.
 (pdftex.def)             Requested size: 180.67625pt x 159.72229pt.
  [10
 
  <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requirements
  Spec and Architecture Proposal Documents/Pictures/DetectionLocalStorageUseCase
 .jpg>]
-<Pictures/Screenshots_1.png, id=44, 1084.05pt x 1927.2pt>
-File: Pictures/Screenshots_1.png Graphic file (type png)
+<Pictures/Interface_1.png, id=44, 602.25pt x 963.6pt>
+File: Pictures/Interface_1.png Graphic file (type png)
 
-<use Pictures/Screenshots_1.png>
-Package pdftex.def Info: Pictures/Screenshots_1.png used on input line 298.
-(pdftex.def)             Requested size: 216.80615pt x 385.40376pt.
+<use Pictures/Interface_1.png>
+Package pdftex.def Info: Pictures/Interface_1.png used on input line 288.
+(pdftex.def)             Requested size: 216.80983pt x 385.40376pt.
 
-<Pictures/Screenshots_2.png, id=45, 1084.05pt x 1927.2pt>
-File: Pictures/Screenshots_2.png Graphic file (type png)
+<Pictures/Interface_2.png, id=45, 803.0pt x 1284.8pt>
+File: Pictures/Interface_2.png Graphic file (type png)
 
-<use Pictures/Screenshots_2.png>
-Package pdftex.def Info: Pictures/Screenshots_2.png used on input line 303.
-(pdftex.def)             Requested size: 216.80615pt x 385.40376pt.
+<use Pictures/Interface_2.png>
+Package pdftex.def Info: Pictures/Interface_2.png used on input line 293.
+(pdftex.def)             Requested size: 216.8129pt x 385.40376pt.
 
-<Pictures/Screenshots_3.png, id=46, 1084.05pt x 1927.2pt>
-File: Pictures/Screenshots_3.png Graphic file (type png)
+<Pictures/Interface_3.png, id=46, 803.0pt x 1284.8pt>
+File: Pictures/Interface_3.png Graphic file (type png)
 
-<use Pictures/Screenshots_3.png>
-Package pdftex.def Info: Pictures/Screenshots_3.png used on input line 308.
-(pdftex.def)             Requested size: 216.80615pt x 385.40376pt.
+<use Pictures/Interface_3.png>
+Package pdftex.def Info: Pictures/Interface_3.png used on input line 298.
+(pdftex.def)             Requested size: 216.8129pt x 385.40376pt.
 
-<Pictures/Screenshots_4.png, id=47, 1084.05pt x 1927.2pt>
-File: Pictures/Screenshots_4.png Graphic file (type png)
+<Pictures/Interface_4.png, id=47, 803.0pt x 1284.8pt>
+File: Pictures/Interface_4.png Graphic file (type png)
 
-<use Pictures/Screenshots_4.png>
-Package pdftex.def Info: Pictures/Screenshots_4.png used on input line 313.
-(pdftex.def)             Requested size: 216.80615pt x 385.40376pt.
+<use Pictures/Interface_4.png>
+Package pdftex.def Info: Pictures/Interface_4.png used on input line 303.
+(pdftex.def)             Requested size: 216.8129pt x 385.40376pt.
+
+<Pictures/Interface_5.png, id=48, 803.0pt x 1284.8pt>
+File: Pictures/Interface_5.png Graphic file (type png)
+
+<use Pictures/Interface_5.png>
+Package pdftex.def Info: Pictures/Interface_5.png used on input line 308.
+(pdftex.def)             Requested size: 216.8129pt x 385.40376pt.
+
+<Pictures/Interface_6.png, id=49, 803.0pt x 1284.8pt>
+File: Pictures/Interface_6.png Graphic file (type png)
+
+<use Pictures/Interface_6.png>
+Package pdftex.def Info: Pictures/Interface_6.png used on input line 313.
+(pdftex.def)             Requested size: 216.8129pt x 385.40376pt.
+
+<Pictures/Interface_7.png, id=50, 803.0pt x 1284.8pt>
+File: Pictures/Interface_7.png Graphic file (type png)
+
+<use Pictures/Interface_7.png>
+Package pdftex.def Info: Pictures/Interface_7.png used on input line 318.
+(pdftex.def)             Requested size: 216.8129pt x 385.40376pt.
  [11] [12 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Req
-uirements Spec and Architecture Proposal Documents/Pictures/Screenshots_1.png>]
- [13 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requirem
-ents Spec and Architecture Proposal Documents/Pictures/Screenshots_2.png>] [14 
-<C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requirements 
-Spec and Architecture Proposal Documents/Pictures/Screenshots_3.png>] [15 <C:/U
-sers/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requirements Spec 
-and Architecture Proposal Documents/Pictures/Screenshots_4.png>]
-<Pictures/CoreDomainObjects.jpg, id=64, 612.03656pt x 317.68687pt>
+uirements Spec and Architecture Proposal Documents/Pictures/Interface_1.png>] [
+13 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requiremen
+ts Spec and Architecture Proposal Documents/Pictures/Interface_2.png>] [14 <C:/
+Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requirements Spec
+ and Architecture Proposal Documents/Pictures/Interface_3.png>] [15 <C:/Users/J
+ay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requirements Spec and Ar
+chitecture Proposal Documents/Pictures/Interface_4.png>] [16 <C:/Users/Jay/Docu
+ments/GitHub/The_Gruners/2. Documentation Phase/Requirements Spec and Architect
+ure Proposal Documents/Pictures/Interface_5.png>] [17 <C:/Users/Jay/Documents/G
+itHub/The_Gruners/2. Documentation Phase/Requirements Spec and Architecture Pro
+posal Documents/Pictures/Interface_6.png>]
+[18 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requireme
+nts Spec and Architecture Proposal Documents/Pictures/Interface_7.png>]
+<Pictures/CoreDomainObjects.jpg, id=77, 612.03656pt x 317.68687pt>
 File: Pictures/CoreDomainObjects.jpg Graphic file (type jpg)
 
 <use Pictures/CoreDomainObjects.jpg>
-Package pdftex.def Info: Pictures/CoreDomainObjects.jpg used on input line 327.
+Package pdftex.def Info: Pictures/CoreDomainObjects.jpg used on input line 332.
 
 (pdftex.def)             Requested size: 451.6859pt x 224.7691pt.
  
 AED: lastpage setting LastPage
-[16 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requireme
+[19 <C:/Users/Jay/Documents/GitHub/The_Gruners/2. Documentation Phase/Requireme
 nts Spec and Architecture Proposal Documents/Pictures/CoreDomainObjects.jpg>]
 ("C:\Users\Jay\Documents\GitHub\The_Gruners\2. Documentation Phase\Requirements
  Spec and Architecture Proposal Documents\Requirements Document.aux") ) 
 Here is how much of TeX's memory you used:
- 5490 strings out of 493921
- 84470 string characters out of 3144882
+ 5505 strings out of 493921
+ 84820 string characters out of 3144882
  162856 words of memory out of 3000000
- 8713 multiletter control sequences out of 15000+200000
+ 8725 multiletter control sequences out of 15000+200000
  8500 words of font info for 30 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,7n,39p,784b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,7n,39p,817b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Requirements Document.pdf" (16 pages, 6029058 bytes).
+Output written on "Requirements Document.pdf" (19 pages, 2782555 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
