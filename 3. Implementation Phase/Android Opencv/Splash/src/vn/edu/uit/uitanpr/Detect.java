@@ -42,6 +42,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import org.json.JSONException;
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
@@ -117,7 +118,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 	private double latitude = 0.0;
 	private double longitude = 0.0;
 	
-	//private ServiceClientWrapper restClientObject;
+	private ServiceClientWrapper restClientObject;
 
 	private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
 		@Override
@@ -127,7 +128,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 				Log.i(TAG, "OpenCV loaded successfully");
 				
 				//Perform Server actions (Populate JSON ARRAY For local Fetching)
-				//restClientObject = new ServiceClientWrapper();
+				restClientObject = new ServiceClientWrapper();
 				//--------------------------------------------
 				
 				try {
@@ -360,7 +361,10 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 		@Override
 		protected void onDraw(Canvas canvas) {
 			Paint paint = new Paint();
-			paint.setColor(Color.GREEN);
+			paint.setColor(Color.rgb(255, 153, 0)); //Orange
+			
+			
+			
 			paint.setTextSize(20);
 			if (plates != null) {
 				paint.setStrokeWidth(3);
@@ -375,8 +379,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 					canvas.drawRect(x, y, (x + w), (y + h), paint);
 					
 					// isNewPlate?
-					Point platePoint = new Point(platesArray[i].x,
-							platesArray[i].y);
+					Point platePoint = new Point(platesArray[i].x, platesArray[i].y);
 
 					currentPlatePointList.add(platePoint);
 
@@ -450,16 +453,37 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 		}
 		public void updateResult(String result) {
 			// TODO Auto-generated method stub
+			try {
+				if(restClientObject.somethingWrong(result))
+				{
+					final ToneGenerator tg = new ToneGenerator(AudioManager.STREAM_NOTIFICATION, 100);
+				     tg.startTone(ToneGenerator.TONE_SUP_BUSY, 35);
+					resultOCR.setBackgroundColor(Color.TRANSPARENT);
+				     resultOCR.setTextColor(Color.RED);
+				     resultOCR.setText("Something's Wrong! See History");
+				     //tg.ST
+					
+				}
+				else
+				{
+					final ToneGenerator tg = new ToneGenerator(AudioManager.STREAM_NOTIFICATION, 100);
+				     tg.startTone(ToneGenerator.TONE_PROP_BEEP, 35);
+					resultOCR.setBackgroundColor(Color.TRANSPARENT);
+				     resultOCR.setTextColor(Color.GREEN);
+				     resultOCR.setText("Successfully Detected. See History");
+				}
+			} catch (JSONException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
 			
 			
 			//Play tone when number plate found
-			final ToneGenerator tg = new ToneGenerator(AudioManager.STREAM_NOTIFICATION, 100);
-		     tg.startTone(ToneGenerator.TONE_PROP_BEEP);
+			
 			
 			//resultOCR.setText(result);
-		     resultOCR.setBackgroundColor(Color.TRANSPARENT);
-		     resultOCR.setTextColor(Color.GREEN);
-		     resultOCR.setText("Successfully Scanned. See History");
+		     
 		     //resultOCR.setText("");
 		    // resultOCR.setco
 			String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());

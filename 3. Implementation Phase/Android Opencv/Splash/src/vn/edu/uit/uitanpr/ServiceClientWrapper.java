@@ -184,6 +184,25 @@ public class ServiceClientWrapper {
 		return result;
 	}
 	
+	public boolean somethingWrong(String num) throws JSONException
+	{
+		
+		boolean result = false;
+		
+		for (int i = 0; i < vehicles.length(); i++) {
+
+			JSONObject proj = vehicles.getJSONObject(i);
+
+			if(proj.getString("numberPlate").equals(num))
+		    {
+				if(proj.getString("fines").equals("fines") || proj.getString("stolen").equals("stolen") || !proj.getString("roadworthy").equals("roadworthy"))
+		    	result = true;
+		    	break;
+		    }
+		    
+		}
+		return result;
+	}
 	
 	public int getFeatureID(String num) throws JSONException
 	{
