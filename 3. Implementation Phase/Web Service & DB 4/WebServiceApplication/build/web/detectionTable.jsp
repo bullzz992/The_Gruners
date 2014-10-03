@@ -20,13 +20,16 @@
         SELECT * FROM detection
     </sql:query>
     
-    <table border="1">
+    <table class="bordered">
+        <!-- column headers -->
+        <thead>
         <!-- column headers -->
         <tr>
         <c:forEach var="columnName" items="${result.columnNames}">
             <th><c:out value="${columnName}"/></th>
         </c:forEach>
     </tr>
+        </thead>
     <!-- column data -->
     <c:forEach var="row" items="${result.rowsByIndex}">
         <tr>

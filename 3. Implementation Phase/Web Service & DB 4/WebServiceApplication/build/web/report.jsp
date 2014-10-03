@@ -136,20 +136,23 @@ $(document).ready(function(){
 						</form>
 						<div class="tfclear"></div>
 					</div>
-					<div id="results" >
+					<div id="results"  >
                                             <%@ include file="connectionHeader.jsp" %>     
     
                                                 <sql:query var="result" dataSource="${dataSource}">
                                                     SELECT * FROM vehicle
                                                 </sql:query>
 
-                                                <table border="1">
+                                                <table class="bordered">
                                                     <!-- column headers -->
+                                                    <thead>
                                                     <tr>
                                                     <c:forEach var="columnName" items="${result.columnNames}">
+                                                        <tre>
                                                         <th><c:out value="${columnName}"/></th>
                                                     </c:forEach>
                                                 </tr>
+                                                </thead>
                                                 <!-- column data -->
                                                 <c:forEach var="row" items="${result.rowsByIndex}">
                                                     <tr>

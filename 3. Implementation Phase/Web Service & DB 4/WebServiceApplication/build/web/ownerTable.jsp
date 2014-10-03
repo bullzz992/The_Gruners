@@ -11,6 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -20,13 +21,16 @@
         SELECT * FROM owner
     </sql:query>
     
-    <table border="1">
+    <table class="bordered">
+        <!-- column headers -->
+        <thead>
         <!-- column headers -->
         <tr>
         <c:forEach var="columnName" items="${result.columnNames}">
             <th><c:out value="${columnName}"/></th>
         </c:forEach>
     </tr>
+    </thead>
     <!-- column data -->
     <c:forEach var="row" items="${result.rowsByIndex}">
         <tr>

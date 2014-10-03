@@ -15,6 +15,7 @@
         <script src="livevalidation_prototype.js" type="text/javascript"></script>
         <script src="validate.js" type="text/javascript"></script>
         <title>JSP Page</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
         <script type="text/javascript">
 		window.onload = function(){ 
 		//Get submit button

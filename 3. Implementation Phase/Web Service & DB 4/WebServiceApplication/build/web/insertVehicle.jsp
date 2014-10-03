@@ -12,9 +12,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="livevalidation_prototype.js" type="text/javascript"></script>
         <script src="validate.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
         <title>JSP Page</title>
     </head>
-    <body>
+    <body class = "left">
         <form method="post" action="insertV.jsp"> 
         
         <table>
