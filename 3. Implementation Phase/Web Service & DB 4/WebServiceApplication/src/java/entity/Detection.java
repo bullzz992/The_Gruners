@@ -34,7 +34,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Detection.findByDate", query = "SELECT d FROM Detection d WHERE d.date = :date"),
     @NamedQuery(name = "Detection.findByLocation", query = "SELECT d FROM Detection d WHERE d.location = :location"),
     @NamedQuery(name = "Detection.findByDeviceIp", query = "SELECT d FROM Detection d WHERE d.deviceIp = :deviceIp"),
-    @NamedQuery(name = "Detection.findByFeatureId", query = "SELECT d FROM Detection d WHERE d.featureId = :featureId")})
+    @NamedQuery(name = "Detection.findByFeatureId", query = "SELECT d FROM Detection d WHERE d.featureId = :featureId"),
+    @NamedQuery(name = "Detection.findByNumberplate", query = "SELECT d FROM Detection d WHERE d.numberplate = :numberplate")})
 public class Detection implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -61,6 +62,11 @@ public class Detection implements Serializable {
     @NotNull
     @Column(name = "feature_id")
     private int featureId;
+    
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "numberplate")
+    private String numberplate;
 
     public Detection() {
     }
@@ -69,12 +75,13 @@ public class Detection implements Serializable {
         this.detectionId = detectionId;
     }
 
-    public Detection(Integer detectionId, Date date, String location, String deviceIp, int featureId) {
+    public Detection(Integer detectionId, Date date, String location, String deviceIp, int featureId, String numberplate) {
         this.detectionId = detectionId;
         this.date = date;
         this.location = location;
         this.deviceIp = deviceIp;
         this.featureId = featureId;
+        this.numberplate = numberplate;
     }
 
     public Integer getDetectionId() {
@@ -116,6 +123,14 @@ public class Detection implements Serializable {
     public void setFeatureId(int featureId) {
         this.featureId = featureId;
     }
+    
+    public String geNumberPlate() {
+        return numberplate;
+    }
+
+    public void setFeatureId(String numberplate) {
+        this.numberplate = numberplate;
+    }
 
     @Override
     public int hashCode() {
@@ -131,7 +146,7 @@ public class Detection implements Serializable {
             return false;
         }
         Detection other = (Detection) object;
-        if ((this.detectionId == null && other.detectionId != null) || (this.detectionId != null && !this.detectionId.equals(other.detectionId))) {
+        if ((this.detectionId == null && other.detectionId != null) || (this.detectionId != null && !this.detectionId.equals(other.detectionId)) || (this.numberplate != null && !this.numberplate.equals(other.numberplate))) {
             return false;
         }
         return true;
