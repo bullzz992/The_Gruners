@@ -2,16 +2,7 @@ package com.hazuu.uitanpr.neural;
 import java.io.Serializable;
 import java.util.*;
 
-/**
-  * Java Neural Network Example
-  * Handwriting Recognition
-  * by Jeff Heaton (http://www.jeffheaton.com) 1-2002
-  * -------------------------------------------------
-  * Abstract base class for Neural Networks.
-  *
-  * @author Jeff Heaton (http://www.jeffheaton.com)
-  * @version 1.0
-  */
+
 
 abstract public class Network implements Serializable{
 

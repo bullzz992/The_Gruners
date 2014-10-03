@@ -1,14 +1,5 @@
 package com.hazuu.uitanpr.neural;
-/**
-  * Java Neural Network Example
-  * Handwriting Recognition
-  * by Jeff Heaton (http://www.jeffheaton.com) 1-2002
-  * -------------------------------------------------
-  * A class that is used to store a downsampled character.
-  *
-  * @author Jeff Heaton (http://www.jeffheaton.com)
-  * @version 1.0
-  */
+
 
 public class SampleData implements Comparable,Cloneable {
 

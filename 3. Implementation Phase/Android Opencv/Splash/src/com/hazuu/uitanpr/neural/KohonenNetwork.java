@@ -2,17 +2,7 @@ package com.hazuu.uitanpr.neural;
 
 import java.io.Serializable;
 
-/**
-  * Java Neural Network Example
-  * Handwriting Recognition
-  * by Jeff Heaton (http://www.jeffheaton.com) 1-2002
-  * -------------------------------------------------
-  *
-  * This class implements a basic Kohonen Neural Network.
-  *
-  * @author Jeff Heaton (http://www.jeffheaton.com)
-  * @version 1.0
-  */
+
 
 
 public class KohonenNetwork extends Network implements Serializable{
