@@ -12,10 +12,13 @@ import android.hardware.Camera;
 import android.location.Location;
 import android.media.AudioManager;
 import android.media.ToneGenerator;
+import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
+import android.text.format.Formatter;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -511,7 +514,14 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 			toFile += "Longitude: " + longitude + "\n";
 			toFile += "Speed: " + String.valueOf(utils.roundDecimal(utils.convertSpeed(speed), 2)) + "km/h" + "\n";
 			toFile += "NP: " + result + "\n\n\n";
+			
+			
+		    String ip =   "Not Found";
+			
 			if(result!=null && !TextUtils.isEmpty(result) && result!=""){
+				
+				restClientObject.inSertDetection(timeStamp, latitude + ", "+ longitude, ip, result);
+				
 				FileWriter f;
 				try{
 					f = new FileWriter(Environment.getExternalStorageDirectory() + "/UIT-ANPR.txt", true);

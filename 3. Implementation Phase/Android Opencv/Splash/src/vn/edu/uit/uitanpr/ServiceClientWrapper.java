@@ -1,6 +1,11 @@
 package vn.edu.uit.uitanpr;
 
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
+
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -29,6 +34,8 @@ public class ServiceClientWrapper {
 	public JSONArray owners;
 	public JSONArray vehicles;
 	public JSONArray features;
+	public JSONArray detections;
+	
 	
 	
 	public ServiceClientWrapper()
@@ -88,6 +95,8 @@ public class ServiceClientWrapper {
 			Log.i("I'm here------------Features---------------", "Found: " + vehicles + ex.getMessage());
 		}
 		
+		
+		
 		//PopulateFeatures
 		//http://localhost:8080/WebServiceApplication/webresources/entity.vehiclefeatures
 		try
@@ -115,6 +124,34 @@ public class ServiceClientWrapper {
 		{
 			Log.i("I'm here------------Features---------------", "Found: " + features + ex.getCause());
 		}
+		
+		//PopulateDetections
+		try
+		{
+			String sampleURL = "http://192.168.43.226:8080/WebServiceApplication/webresources/entity.detection";
+			
+			HttpGet  get = new HttpGet(sampleURL);
+			
+			get.addHeader("accept", "application/json");
+			
+			HttpClient httpclient = new DefaultHttpClient();
+			
+	        HttpResponse response = httpclient.execute(get);
+	       
+			Scanner in = new Scanner(response.getEntity().getContent());
+	        String line ="";
+	            
+	        while(in.hasNextLine()){
+	            line += in.nextLine();
+	        }
+	            
+	        detections = new JSONArray(line);
+	        //Log.i("I'm here------------Features---------------", "Found: " + features);
+		}catch(Exception ex)
+		{
+			Log.i("I'm here------------Features---------------", "Found: " + features + ex.getCause());
+		}
+		
 		
 	}
 	
@@ -242,5 +279,42 @@ public class ServiceClientWrapper {
 	}
 	
 	
+	public int generateDetectionID()
+	{
+		Random rand = new Random();
+		return detections.length()+ 1 + rand.nextInt();
+	}
 	
+	public void inSertDetection(String time, String location, String deviceIP, String numPlate)
+	{
+		 List<NameValuePair> request = new ArrayList<NameValuePair>();
+		 request.add(new BasicNameValuePair("detectionId", generateDetectionID() + ""));
+		 request.add(new BasicNameValuePair("date", time));
+		 request.add(new BasicNameValuePair("location", location));
+		 request.add(new BasicNameValuePair("deviceIp", deviceIP));
+		 request.add(new BasicNameValuePair("featureId", "-1"));
+		 request.add(new BasicNameValuePair("numberplate", numPlate));
+		 
+		 DefaultHttpClient client = new DefaultHttpClient();
+         HttpPost post = new HttpPost("http://192.168.43.226:8080/WebServiceApplication/webresources/entity.detection");
+         
+         UrlEncodedFormEntity entity;
+		try {
+			entity = new UrlEncodedFormEntity(request,HTTP.UTF_8);
+			post.setEntity(entity);
+	         
+	         HttpResponse response = client.execute(post);
+	         Scanner in = new Scanner(response.getEntity().getContent());
+	            String line ="";
+	            
+	            while(in.hasNextLine()){
+	                line += in.nextLine();
+	            }
+	         Log.i("Sent Request?:---------  ", line);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+         
+	}
 }
