@@ -1,0 +1,4 @@
+Team Name: The_Gruners
+Project Description: Mobile Augmented Reality Number Plate Recognition System (Android Application)
+Group Members: MJ Mogale & MJ Musetsho 
+Client Name: Department of Defence, Peace, Safety and Security (CSIR)
