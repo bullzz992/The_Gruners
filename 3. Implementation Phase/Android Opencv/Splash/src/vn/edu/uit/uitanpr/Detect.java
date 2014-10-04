@@ -456,6 +456,31 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 		}
 		public void updateResult(String result) {
 			// TODO Auto-generated method stub
+			
+			char[] sourceArray = result.toCharArray();
+			if(sourceArray[0] == '0')
+			{
+				sourceArray[0] = 'D';
+			}
+			
+			if(sourceArray[1] == '0')
+			{
+				sourceArray[1] = 'D';
+			}
+			if(sourceArray[6] == '9')
+			{
+				sourceArray[6] = 'G';
+			}
+			
+			
+			result = String.valueOf(sourceArray);
+			if(!utils.validatePlate(result))
+			{
+				return;
+			}
+			
+			//Adjust number plate
+			
 			try {
 				if(restClientObject.somethingWrong(result))
 				{

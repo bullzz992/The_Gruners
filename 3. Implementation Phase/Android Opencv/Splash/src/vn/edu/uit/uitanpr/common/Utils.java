@@ -52,6 +52,57 @@ public class Utils {
 		return source;
 	}
 	
+	public boolean validatePlate(String source)
+	{
+		if(source.length() < 7 || source.length() > 8)
+		{
+			return false;
+		}
+		
+		boolean isValid = false;
+		char[] sourceArray = source.toCharArray();
+		
+		
+		if(source.length() == 7)
+		{
+			if(!Character.isDigit(sourceArray[6]) && !Character.isDigit(sourceArray[0]) && !Character.isDigit(sourceArray[1]) && !Character.isDigit(sourceArray[2])  && Character.isDigit(sourceArray[3]) && Character.isDigit(sourceArray[4]) && Character.isDigit(sourceArray[5]))
+			{
+				isValid = true;
+			}
+			else
+			{
+				isValid = false;
+			}
+			
+		}
+		else
+		{
+			if(!Character.isDigit(sourceArray[0]) && !Character.isDigit(sourceArray[1]) && Character.isDigit(sourceArray[3]) && !Character.isDigit(sourceArray[6]) && !Character.isDigit(sourceArray[7]))
+			{
+				isValid = true;
+			}
+			else
+			{
+				isValid = false;
+			}
+		}
+		
+		
+		
+		return isValid;
+		
+	}
+	
+	
+	public String adjustPlate(String source)
+	{
+		char[] sourceArray = source.toCharArray();
+		
+		
+		
+		return null;
+	}
+	
 	public String correctNumber(String source)
 	{
 		/*char[] sourceArray = source.toCharArray();
