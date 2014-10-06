@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import org.json.JSONObject;
 
@@ -171,6 +172,8 @@ SearchView.OnQueryTextListener, SearchView.OnCloseListener{
 					
 				}
 		    }
+			
+			Collections.reverse(numPlateList);
 		 
 		 } catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
