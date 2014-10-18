@@ -15,8 +15,8 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <title>JSP Page</title>
     </head>
-    <body class = "left">
-        <form method="post" action="insertV.jsp"> 
+    <body >
+        <form id ="left" method="post" action="insertV.jsp"> 
         
         <table>
             <tr><b>Vehicle Features</b></tr>

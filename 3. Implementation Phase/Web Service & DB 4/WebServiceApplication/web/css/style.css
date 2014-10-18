@@ -322,8 +322,9 @@ table {
 	border-top: 1px solid #aa9e91;
 	display: block;
 	margin: 0;
-	padding: 0;
+	padding: 10px;
 	width: 700px;
+        padding: 10px;
         margin-right: 100%;
 }
 #body .content .featured {
