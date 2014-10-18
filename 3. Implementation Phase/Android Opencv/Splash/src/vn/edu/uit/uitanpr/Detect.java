@@ -321,7 +321,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 						
 			try {
 				Camera.Size size = camera.getParameters().getPreviewSize();
-				Log.i("SIZE: -->>>>>>>>>>>",size.width + "  X " + size.height);
+				//Log.i("SIZE: -->>>>>>>>>>>",size.width + "  X " + size.height);
 				processImage(data, size.width, size.height);
 				//processImage(data, 960, 240);
 				camera.addCallbackBuffer(data);
@@ -377,7 +377,7 @@ public class Detect extends Activity implements OnTaskCompleted, GPSCallback{
 				platesArray = plates.toArray();
 				boolean isHasNewPlate = false;
 				currentPlates.clear();
-				Log.i("SIZE: -->>>>>>>>>>>",plates.width() + "  X " + plates.height());
+				//Log.i("SIZE: -->>>>>>>>>>>",plates.width() + "  X " + plates.height());
 				
 				for (int i = 0; i < platesArray.length; i++) {
 					int x = platesArray[i].x, y = platesArray[i].y, w = platesArray[i].width, h = platesArray[i].height;

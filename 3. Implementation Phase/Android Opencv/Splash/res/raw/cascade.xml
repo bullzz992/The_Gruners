@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <opencv_storage>
+<!-- Automatically converted from haarcascade2, window size = 64x16 -->
 <output type_id="opencv-haar-classifier">
   <size>
     55 40</size>
@@ -1872,4 +1873,5 @@
       <stage_threshold>-1.5347607135772705e+000</stage_threshold>
       <parent>16</parent>
       <next>-1</next></_></stages></output>
+
 </opencv_storage>
